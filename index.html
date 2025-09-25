@@ -3,371 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>School of the Ancients</title>
-  <meta name="description" content="Where ancient wisdom meets the classroom of tomorrow. AI‑powered historical mentors teach through Socratic dialogue in immersive worlds." />
-  <meta property="og:title" content="School of the Ancients" />
-  <meta property="og:description" content="Ancient voices. Modern minds. One classroom." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://school-of-the-ancients.github.io/" />
-  <meta name="theme-color" content="#0f172a" />
+  <title>School of the Ancients VR — In Development</title>
+  <meta name="description" content="AI‑powered VR classroom with Socratic mentors. In development." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b1020; /* slate-950 */
-      --panel: #11183a; /* indigo-950-ish */
-      --panel-2: #0e142e; 
-      --text: #e5e7eb; /* gray-200 */
-      --muted: #94a3b8; /* slate-400 */
-      --brand: #8b5cf6; /* violet-500 */
-      --brand-2: #22d3ee; /* cyan-400 */
-      --accent: #f59e0b; /* amber-500 */
-      --ok: #10b981; /* emerald-500 */
-      --danger: #ef4444; /* red-500 */
-      --ring: 0 0 0 3px rgba(139,92,246,.35);
-      --shadow: 0 20px 40px rgba(0,0,0,.35);
-    }
-    * { box-sizing: border-box }
-    html, body { height: 100% }
-    body {
-      margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 10% -10%, rgba(34,211,238,.08), transparent 60%),
-                  radial-gradient(900px 600px at 110% 10%, rgba(139,92,246,.1), transparent 50%),
-                  var(--bg);
-      color: var(--text);
-    }
-    a { color: var(--brand-2); text-decoration: none }
-    a:hover { text-decoration: underline }
-
-    .container { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem }
-    .btn {
-      display: inline-flex; gap: .5rem; align-items: center; justify-content: center;
-      padding: .85rem 1.15rem; border-radius: .9rem; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(135deg, rgba(139,92,246,.25), rgba(34,211,238,.15));
-      color: white; font-weight: 600; letter-spacing: .2px; box-shadow: var(--shadow);
-      transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-    }
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.05) }
-    .btn.secondary { background: rgba(17,24,58,.7) }
-    .badge { display: inline-block; padding: .25rem .6rem; border-radius: .6rem; font-size: .75rem; background: rgba(34,211,238,.14); color: #a5f3fc; border: 1px solid rgba(255,255,255,.08) }
-
-    header {
-      position: sticky; top: 0; z-index: 40; backdrop-filter: blur(10px);
-      background: linear-gradient(rgba(11,16,32,.9), rgba(11,16,32,.6)); border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: .85rem 0 }
-    .brand { display: flex; gap: .75rem; align-items: center; font-weight: 800; letter-spacing: .3px }
-    .logo {
-      width: 40px; height: 40px; border-radius: 10px; background:
-        radial-gradient(60% 60% at 30% 30%, rgba(139,92,246,.9), rgba(34,211,238,.9));
-      box-shadow: 0 10px 30px rgba(139,92,246,.3), inset 0 0 20px rgba(255,255,255,.15);
-    }
-    .nav a { color: var(--text); opacity: .85; font-weight: 500; margin: 0 .6rem }
-    .nav a:hover { opacity: 1 }
-
-    .hero { padding: 5rem 0 3rem; text-align: center }
-    .hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.05; margin: .75rem 0 }
-    .hero p { color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.2rem) }
-    .cta { display: flex; gap: .85rem; margin-top: 1.25rem; justify-content: center; flex-wrap: wrap }
-
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.25rem }
-    section { padding: 3rem 0 }
-
-    .card {
-      background: linear-gradient(180deg, rgba(17,24,58,.75), rgba(14,20,46,.9));
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 1.25rem; padding: 1.1rem; box-shadow: var(--shadow);
-    }
-    h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 .75rem }
-    h3 { font-size: 1.1rem; margin: 0 0 .45rem }
-    .muted { color: var(--muted) }
-
-    .features .card { height: 100% }
-
-    .feature-icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center;
-      background: linear-gradient(135deg, rgba(139,92,246,.25), rgba(34,211,238,.2));
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .two-col { align-items: center }
-    .two-col .visual {
-      min-height: 260px; border-radius: 1.25rem; background:
-        radial-gradient(120px 80px at 20% 20%, rgba(139,92,246,.25), transparent 60%),
-        radial-gradient(140px 100px at 70% 50%, rgba(34,211,238,.22), transparent 60%),
-        linear-gradient(180deg, rgba(17,24,58,.7), rgba(17,24,58,.95));
-      border: 1px solid rgba(255,255,255,.08); box-shadow: var(--shadow);
-      display: grid; place-items: center; padding: 1rem; text-align: center
-    }
-
-    .timeline { position: relative; padding-left: 1.25rem }
-    .timeline::before { content: ""; position: absolute; left: .35rem; top: .2rem; bottom: .2rem; width: 2px; background: linear-gradient(var(--brand), transparent) }
-    .milestone { position: relative; margin: 0 0 1rem 0; padding-left: 1rem }
-    .dot { position: absolute; left: -3px; top: .25rem; width: .7rem; height: .7rem; border-radius: 50%; background: var(--brand-2); box-shadow: 0 0 0 3px rgba(34,211,238,.15) }
-
-    .faq details { background: rgba(17,24,58,.7); border: 1px solid rgba(255,255,255,.08); border-radius: .9rem; padding: .85rem 1rem }
-    .faq details + details { margin-top: .8rem }
-    .faq summary { cursor: pointer; list-style: none }
-    .faq summary::-webkit-details-marker { display: none }
-
-    footer { border-top: 1px solid rgba(255,255,255,.06); background: linear-gradient(180deg, rgba(11,16,32,.6), rgba(11,16,32,.9)); padding: 2rem 0; margin-top: 3rem }
-    .footer-grid { display: grid; gap: 1rem; grid-template-columns: repeat(12, 1fr) }
-    .footer-grid > div { grid-column: span 12 }
-
-    @media (min-width: 768px) {
-      .features .col { grid-column: span 3 }
-      .two-col .left { grid-column: span 6 }
-      .two-col .right { grid-column: span 6 }
-      .footer-grid > div { grid-column: span 4 }
-    }
-
-    .kbd { padding: .15rem .4rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15); border-bottom-width: 2px; border-radius: .4rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: .8rem }
-
-    .chips { display: flex; flex-wrap: wrap; gap: .5rem }
-    .chip { padding: .35rem .6rem; border-radius: .7rem; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); font-size: .85rem }
-
-    .toggle { cursor: pointer; border-radius: .6rem; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); padding: .35rem .6rem; font-size: .9rem }
+    :root { --bg:#0b1020; --text:#e7e9ee; --muted:#9aa4b2; --card:#121a35; --line:#233055; --brand:#8b5cf6; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:880px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;border-bottom:1px solid var(--line)}
+    h1{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:.2rem 0 .6rem}
+    .tag{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid var(--line);border-radius:.5rem;color:#a5b4fc;background:rgba(139,92,246,.08)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+    h2{font-size:1.25rem;margin:.2rem 0 .6rem}
+    p{color:var(--muted);line-height:1.65}
+    ul{color:var(--muted);line-height:1.65;padding-left:1.1rem}
+    code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace}
+    a{color:#7dd3fc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin:36px 0 8px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;font-size:.9rem}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
+    .btn.secondary{background:#0e142b;color:#cbd5e1}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <span>School of the Ancients</span>
-        <span class="badge">Socratic • AI • VR</span>
+  <div class="wrap">
+    <header>
+      <div>
+        <strong>School of the Ancients VR</strong>
+        <span class="tag" title="Work in progress">IN DEVELOPMENT</span>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#faq">FAQ</a>
-        <button class="toggle" id="themeBtn" title="Toggle contrast">Contrast</button>
+      <nav class="cta">
+        <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">GitHub Repo</a>
+        <a class="btn secondary" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Org</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero container">
-      <span class="badge">alpha preview</span>
-      <h1>Ancient voices. <span style="color: var(--brand-2)">Modern minds.</span> One classroom.</h1>
-      <p>Debate Socrates under Athenian starlight. Build with Da Vinci at a Florentine bench. Explore the cosmos through Galileo’s lens. An AI‑powered school that teaches by <em>asking</em>—Socratic dialogue in immersive worlds.</p>
-      <div class="cta">
-        <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">
-          <!-- GitHub icon -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 9.9 8.2 11.5.6.1.8-.3.8-.6v-2.3c-3.3.8-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 2.9 1.3 3.5 1 .1-.8.4-1.3.7-1.7-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.6 1.2-3.5 0-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.6 11.6 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.6 1.7.1 3 .1 3.3.8.9 1.2 2.1 1.2 3.5 0 4.9-2.9 5.9-5.6 6.2.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 24 12.7 12 12 0 0 0 12 .5Z"/></svg>
-          View VR Repo
-        </a>
-        <a class="btn secondary" href="#demo">Watch Demo</a>
-      </div>
-    </section>
-
-    <section id="about" class="container two-col grid">
-      <div class="left">
-        <div class="card">
-          <h2>What is School of the Ancients?</h2>
-          <p class="muted">A learning platform that blends AI, VR/AR, and primary sources to create mentor‑led lessons with historical figures. Our Operator loads worlds on command (“Load: Athenian Agora”) and AI mentors guide students using Socratic Q&A.</p>
-          <div class="chips" style="margin-top:.75rem">
-            <span class="chip">Socratic Q&A</span>
-            <span class="chip">AI historical mentors</span>
-            <span class="chip">VR/AR worlds</span>
-            <span class="chip">Project‑based learning</span>
-            <span class="chip">Open source</span>
-          </div>
-        </div>
-      </div>
-      <div class="right visual">
-        <div>
-          <div style="font-size:2.5rem; font-weight:800; letter-spacing:.5px;">“Ask, don’t tell.”</div>
-          <div class="muted" style="margin-top:.35rem">Learning as dialogue—problems, proofs, and projects, not lectures.</div>
-          <div style="margin-top:1rem" class="chips">
-            <span class="kbd">Operator: load Agora</span>
-            <span class="kbd">/mentor Socrates</span>
-            <span class="kbd">/challenge proof by contradiction</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="container features">
-      <h2>Core Features</h2>
-      <div class="grid">
-        <div class="col card" style="grid-column: span 12;" aria-hidden="true"></div>
-        <div class="col card" style="grid-column: span 12;" aria-hidden="true"></div>
-      </div>
-      <div class="grid" style="margin-top:-2.4rem">
-        <div class="col card">
-          <div class="feature-icon" aria-hidden="true">🎓</div>
-          <h3>AI Mentors</h3>
-          <p class="muted">Debate Socrates, build with Da Vinci, observe with Galileo. Mentors teach in their own voice, grounded in primary sources.</p>
-        </div>
-        <div class="col card">
-          <div class="feature-icon" aria-hidden="true">💬</div>
-          <h3>Socratic Dialogue</h3>
-          <p class="muted">Guided questions that lead to your own proofs, designs, and experiments. Learn by reasoning—then doing.</p>
-        </div>
-        <div class="col card">
-          <div class="feature-icon" aria-hidden="true">🌐</div>
-          <h3>Operator Loader</h3>
-          <p class="muted">Voice‑or text‑command the classroom: load worlds, spawn artifacts, attach behaviors, and save sessions.</p>
-        </div>
-        <div class="col card">
-          <div class="feature-icon" aria-hidden="true">🧭</div>
-          <h3>Adaptive Curriculum</h3>
-          <p class="muted">Lessons adjust to your level and goals; mentors scaffold challenges and track mastery over time.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="demo" class="container two-col grid">
-      <div class="left">
-        <div class="card visual" style="padding:0; overflow:hidden">
-          <!-- Replace the src with a real demo link when ready -->
-          <iframe style="width:100%; height:320px; border:0" srcdoc="\
-            <style>body{margin:0;background:#0b1020;color:#e5e7eb;display:grid;place-items:center;font-family:Inter,sans-serif} .b{padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(135deg,rgba(139,92,246,.25),rgba(34,211,238,.15));} </style>\
-            <div>Demo coming soon — see the VR repo. <a class='b' href='https://github.com/School-of-the-Ancients/school-of-the-ancients-vr' target='_top'>Open Repo</a></div>\
-          "></iframe>
-        </div>
-      </div>
-      <div class="right">
-        <div class="card">
-          <h2>How it works</h2>
-          <ol class="muted" style="line-height:1.7">
-            <li><strong>Pick a world</strong> — Agora, Florentine workshop, early observatory.</li>
-            <li><strong>Choose your mentor</strong> — Socrates, Da Vinci, Galileo (more coming).</li>
-            <li><strong>Learn by doing</strong> — proofs, sketches, experiments, and debates.</li>
-          </ol>
-          <div class="cta" style="justify-content:flex-start">
-            <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">Star on GitHub</a>
-            <a class="btn secondary" href="#faq">Read the FAQ</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container two-col grid">
-      <div class="left">
-        <div class="card">
-          <h2>Meet the first mentors</h2>
-          <div class="grid" style="grid-template-columns: repeat(12, 1fr); gap: .9rem">
-            <div class="card" style="grid-column: span 12; background: rgba(255,255,255,.03)">
-              <h3>Socrates</h3>
-              <p class="muted">Philosophy & ethics through questions. Expect contradictions, definitions, and relentless clarity.</p>
-            </div>
-            <div class="card" style="grid-column: span 12; background: rgba(255,255,255,.03)">
-              <h3>Leonardo da Vinci</h3>
-              <p class="muted">Sketch, prototype, iterate. Engineering meets art—bridges, flying machines, and anatomy studies.</p>
-            </div>
-            <div class="card" style="grid-column: span 12; background: rgba(255,255,255,.03)">
-              <h3>Galileo Galilei</h3>
-              <p class="muted">Observation, measurement, and math. Telescopes, motion, and evidence over authority.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="card">
-          <h2>Curriculum tracks</h2>
-          <ul class="muted" style="line-height:1.7">
-            <li><strong>Logic & Rhetoric</strong> — fallacies, argument maps, dialectic.
-            <li><strong>Design & Prototyping</strong> — sketch to model to build.
-            <li><strong>Scientific Method</strong> — experiment design & data.
-            <li><strong>Primary Sources</strong> — read, cite, and debate.
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="roadmap" class="container">
-      <div class="card">
-        <h2>Roadmap</h2>
-        <div class="timeline">
-          <div class="milestone"><span class="dot"></span>
-            <strong>Alpha (Now)</strong> — VR repo scaffolding, mentor prompts, basic Operator commands.
-          </div>
-          <div class="milestone"><span class="dot"></span>
-            <strong>Beta</strong> — adaptive curriculum, dashboards, cloud save, first public demo.
-          </div>
-          <div class="milestone"><span class="dot"></span>
-            <strong>1.0</strong> — creator tools, classroom mode, multiuser sessions, mod kit.
-          </div>
-        </div>
-        <div class="cta" style="margin-top: .5rem">
-          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr/issues" target="_blank" rel="noopener">View Issues</a>
-          <a class="btn secondary" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Browse Org</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="container faq">
-      <h2>FAQ</h2>
-      <details>
-        <summary><strong>Is this open source?</strong></summary>
-        <p class="muted">Yes. Core repos live under the School‑of‑the‑Ancients org on GitHub. We welcome issues and PRs.</p>
-      </details>
-      <details>
-        <summary><strong>Do I need a VR headset?</strong></summary>
-        <p class="muted">No. VR is best, but desktop builds are planned. AR (XREAL, Vision Pro) is on the roadmap.</p>
-      </details>
-      <details>
-        <summary><strong>How do mentors stay accurate?</strong></summary>
-        <p class="muted">Mentors are grounded in primary texts and sources; we cite, summarize, and cross‑check. Expect updates as research improves.</p>
-      </details>
-      <details>
-        <summary><strong>Can creators add worlds?</strong></summary>
-        <p class="muted">Yes. A mod kit will let you add assets, scenes, behaviors, and lesson paths with a registry and templates.</p>
-      </details>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand">
-          <div class="logo" aria-hidden="true"></div>
-          <strong>School of the Ancients</strong>
-        </div>
-        <p class="muted">Where ancient wisdom meets the classroom of tomorrow.</p>
-      </div>
-      <div>
-        <h3>Links</h3>
-        <ul style="padding-left:1rem; line-height:1.8">
-          <li><a href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Repo</a></li>
-          <li><a href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Organization</a></li>
+    <main>
+      <section class="card">
+        <h2>📘 Project Summary</h2>
+        <p><strong>School of the Ancients VR</strong> is an AI-powered, immersive learning platform where students engage with history’s greatest thinkers, scientists, and leaders inside a dynamic VR classroom.</p>
+        <p>The system fuses three layers:</p>
+        <ul>
+          <li><strong>Autonomous AI Company</strong> – a self‑managing AI “faculty” that designs, adapts, and evaluates the curriculum.</li>
+          <li><strong>School of the Ancients VR</strong> – immersive domains where learners meet AI‑emulated historical figures who teach in their own voices and styles.</li>
+          <li><strong>Matrix Operator</strong> – the orchestration layer that spawns environments, assets, and NPCs on command (<em>“Operator, load the Renaissance.”</em>).</li>
         </ul>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <p class="muted">Open an issue on GitHub or propose a feature. Community chat coming soon.</p>
-      </div>
-    </div>
-    <div class="container" style="margin-top:1rem; color: var(--muted); font-size:.9rem">© <span id="year"></span> School of the Ancients</div>
-  </footer>
+        <p><em>Core innovation:</em> Socratic Q&amp;A is woven into the experience, so learning becomes a dialogue, not a download. Instead of reading about Galileo, Cleopatra, or Marcus Aurelius, students debate, experiment, and reflect with them inside living worlds.</p>
+      </section>
 
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+      <section class="card">
+        <h2># School of the Ancients VR</h2>
+        <p><strong>Ancient wisdom. Modern minds. One classroom.</strong></p>
+        <p>School of the Ancients VR is an immersive educational platform that combines AI, VR, and game mechanics to create dynamic classrooms led by history’s greatest figures.</p>
+      </section>
 
-    // Simple high-contrast toggle (handy for projectors/classrooms)
-    const root = document.documentElement;
-    const btn = document.getElementById('themeBtn');
-    let hi = false;
-    btn.addEventListener('click', () => {
-      hi = !hi;
-      if (hi) {
-        root.style.setProperty('--bg', '#0a0a0a');
-        root.style.setProperty('--panel', '#0f0f0f');
-        root.style.setProperty('--panel-2', '#0c0c0c');
-        root.style.setProperty('--text', '#fafafa');
-        root.style.setProperty('--muted', '#d4d4d8');
-      } else {
-        root.style.removeProperty('--bg');
-        root.style.removeProperty('--panel');
-        root.style.removeProperty('--panel-2');
-        root.style.removeProperty('--text');
-        root.style.removeProperty('--muted');
-      }
-    });
-  </script>
+      <section class="card">
+        <h2>Vision</h2>
+        <p>To make learning as engaging as a game, as immersive as VR, and as personalized as a conversation with a mentor.</p>
+      </section>
+
+      <section class="card">
+        <h2>Core Features</h2>
+        <ul>
+          <li><strong>AI‑Emulated Mentors</strong> — Interact with figures like Socrates, Ada Lovelace, Einstein, Cleopatra, and Marcus Aurelius. Each speaks and teaches in their authentic style.</li>
+          <li><strong>Socratic Q&amp;A</strong> — Instead of passively consuming information, learners engage in guided questioning, debates, and reflective dialogue.</li>
+          <li><strong>Immersive Worlds</strong> — Explore the Athenian Agora, Renaissance Florence, or Einstein’s lab. The environment reinforces the lesson.</li>
+          <li><strong>Adaptive Curriculum</strong> — Lessons evolve based on user knowledge, performance, and curiosity. Knowledge checks are built into the dialogue.</li>
+          <li><strong>Matrix Operator</strong> — A voice‑driven AI that spawns assets, worlds, and NPCs on command: <em>“Operator, load the Roman Forum.”</em></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Architecture</h2>
+        <ol>
+          <li><strong>Autonomous AI Company</strong> — self‑managing AI staff optimize curriculum and engagement.</li>
+          <li><strong>VR School</strong> — interactive classrooms with NPC mentors and dynamic lessons.</li>
+          <li><strong>Matrix Operator</strong> — orchestrates real‑time environment and NPC loading.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Example Use Case</h2>
+        <p>• A student enters Florence 1500 and learns perspective drawing from Leonardo da Vinci.<br>
+           • Socrates joins in to question the meaning of “truth in art.”<br>
+           • Marcus Aurelius concludes with a Stoic reflection on the role of beauty in life.</p>
+      </section>
+
+      <section class="card">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>[ ] Core VR world loader (Matrix Operator)</li>
+          <li>[ ] AI Mentor prompt engine (historical figures)</li>
+          <li>[ ] Socratic dialogue flow with branching questions</li>
+          <li>[ ] Multiplayer classrooms for collaborative debate</li>
+          <li>[ ] Gamification: quests, achievements, unlockable mentors</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>License</h2>
+        <p>MIT License (open for academic and creative projects)</p>
+      </section>
+
+      <section class="card">
+        <h2>Get Involved</h2>
+        <p>Follow progress, open issues, and contribute on GitHub.</p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">Star the Repo</a>
+          <a class="btn secondary" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Browse the Org</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> School of the Ancients • In Development
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
