@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>School of the Ancients VR — In Development</title>
-  <meta name="description" content="AI‑powered VR classroom with Socratic mentors. In development." />
+  <title>School of the Ancients — Join Early Access</title>
+  <meta name="description" content="Learn with AI mentors in immersive worlds. Join the School of the Ancients early-access waitlist." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -27,6 +27,25 @@
     .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:8px}
     .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
     .btn.secondary{background:#0e142b;color:#cbd5e1}
+
+    /* Early-access waitlist: native HTML POST to Formspree. */
+    .waitlist{margin:28px 0 22px;padding:clamp(22px,5vw,42px);border:1px solid #5540a5;border-radius:18px;background:linear-gradient(135deg,#211b48 0%,#151e39 75%)}
+    .waitlist h1{max-width:700px;margin:14px 0 10px;line-height:1.15}
+    .waitlist .intro{max-width:650px;font-size:1.05rem;color:#cbd5e1}
+    .waitlist form{margin-top:22px}
+    .waitlist label{display:block;margin-bottom:8px;color:#e7e9ee;font-weight:600}
+    .waitlist .fields{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+    .waitlist input[type=email]{flex:1 1 250px;min-width:0;min-height:46px;padding:12px 14px;border:1px solid #7580aa;border-radius:9px;background:#0b1020;color:#fff;font:inherit}
+    .waitlist input[type=email]:focus-visible,.waitlist button:focus-visible,.waitlist input[type=checkbox]:focus-visible{outline:3px solid #a5b4fc;outline-offset:2px}
+    .waitlist input[type=email]::placeholder{color:#9aa4b2}
+    .waitlist button{min-height:46px;padding:10px 20px;border:0;border-radius:9px;background:#a78bfa;color:#130b2b;font:inherit;font-weight:800;cursor:pointer}
+    .waitlist button:hover:not(:disabled){background:#c4b5fd}
+    .waitlist button:disabled{background:#565471;color:#f0edf8;cursor:not-allowed}
+    .waitlist .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px}
+    .waitlist .consent input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:#a78bfa}
+    .waitlist .consent label{font-size:.91rem;font-weight:400;line-height:1.5;margin:0}
+    .waitlist .small-print{font-size:.8rem;line-height:1.5;margin:12px 0 0;color:#bac4d5}
+    @media(max-width:560px){.waitlist .fields button{width:100%}}
   </style>
 </head>
 <body>
@@ -37,6 +56,7 @@
         <span class="tag" title="Work in progress">IN DEVELOPMENT</span>
       </div>
       <nav class="cta">
+        <a class="btn" href="#early-access">Join waitlist</a>
        <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
           <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
           <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
@@ -45,6 +65,26 @@
     </header>
 
     <main>
+
+      <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
+        <span class="tag">EARLY ACCESS</span>
+        <h1 id="waitlist-title">Learn from history's greatest minds.</h1>
+        <p class="intro">Ask questions, explore immersive worlds, and learn with AI mentors. Join the School of the Ancients waitlist for beta invitations and project updates.</p>
+        <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
+          <label for="waitlist-email">Email address</label>
+          <div class="fields">
+            <input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" required />
+            <button id="waitlist-submit" type="submit">Join the waitlist</button>
+          </div>
+          <input type="hidden" name="source" value="schooloftheancients.com" />
+          <div class="consent">
+            <input id="waitlist-consent" name="consent" type="checkbox" value="yes" required />
+            <label for="waitlist-consent">Yes, email me about School of the Ancients early access and occasional project updates.</label>
+          </div>
+          <p class="small-print">Your email will be collected through Formspree, used only for these updates, and not posted publicly. You can opt out by replying to an email.</p>
+        </form>
+      </section>
+
       <section class="card">
         <h2>📘 Project Summary</h2>
         <p><strong>School of the Ancients VR</strong> is an AI-powered, immersive learning platform where students engage with history’s greatest thinkers, scientists, and leaders inside a dynamic VR classroom.</p>
@@ -113,6 +153,8 @@
     </footer>
   </div>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+
 </body>
 </html>
