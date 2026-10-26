@@ -28,7 +28,7 @@
     .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
     .btn.secondary{background:#0e142b;color:#cbd5e1}
 
-    /* Early-access waitlist: static form; enable by configuring a Formspree endpoint below. */
+    /* Early-access waitlist: native HTML POST to Formspree. */
     .waitlist{margin:28px 0 22px;padding:clamp(22px,5vw,42px);border:1px solid #5540a5;border-radius:18px;background:linear-gradient(135deg,#211b48 0%,#151e39 75%)}
     .waitlist h1{max-width:700px;margin:14px 0 10px;line-height:1.15}
     .waitlist .intro{max-width:650px;font-size:1.05rem;color:#cbd5e1}
@@ -45,7 +45,6 @@
     .waitlist .consent input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:#a78bfa}
     .waitlist .consent label{font-size:.91rem;font-weight:400;line-height:1.5;margin:0}
     .waitlist .small-print{font-size:.8rem;line-height:1.5;margin:12px 0 0;color:#bac4d5}
-    .waitlist .status{margin:12px 0 0;color:#f4d5a6;font-size:.88rem}
     @media(max-width:560px){.waitlist .fields button{width:100%}}
   </style>
 </head>
@@ -71,11 +70,11 @@
         <span class="tag">EARLY ACCESS</span>
         <h1 id="waitlist-title">Learn from history's greatest minds.</h1>
         <p class="intro">Ask questions, explore immersive worlds, and learn with AI mentors. Join the School of the Ancients waitlist for beta invitations and project updates.</p>
-        <form id="waitlist-form" action="#" method="POST">
+        <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
           <label for="waitlist-email">Email address</label>
           <div class="fields">
             <input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" required />
-            <button id="waitlist-submit" type="submit" disabled>Signups opening soon</button>
+            <button id="waitlist-submit" type="submit">Join the waitlist</button>
           </div>
           <input type="hidden" name="source" value="schooloftheancients.com" />
           <div class="consent">
@@ -84,7 +83,6 @@
           </div>
           <p class="small-print">Your email will be collected through Formspree, used only for these updates, and not posted publicly. You can opt out by replying to an email.</p>
         </form>
-        <p class="status" id="waitlist-status" role="status">Email signups are being set up. Check back soon.</p>
       </section>
 
       <section class="card">
@@ -157,20 +155,6 @@
 
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
-  <script>
-    // One-time setup: create a Formspree form and replace the placeholder
-    // with its endpoint (https://formspree.io/f/YOUR_FORM_ID).
-    // Leave blank/placeholder to keep the submit button safely disabled.
-    const WAITLIST_ENDPOINT = 'PASTE_FORMSPREE_ENDPOINT_HERE';
-    const waitlistForm = document.getElementById('waitlist-form');
-    const waitlistButton = document.getElementById('waitlist-submit');
-    const waitlistStatus = document.getElementById('waitlist-status');
-    if (/^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(WAITLIST_ENDPOINT)) {
-      waitlistForm.action = WAITLIST_ENDPOINT;
-      waitlistButton.disabled = false;
-      waitlistButton.textContent = 'Join the waitlist';
-      waitlistStatus.hidden = true;
-    }
-  </script>
+
 </body>
 </html>
