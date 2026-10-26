@@ -2,6 +2,12 @@
 
 The School of the Ancients website is hosted on **GitHub Pages**, which cannot directly store email submissions. The form on the homepage is intentionally **disabled until a real Formspree endpoint is configured**. Do not treat UI availability as proof of successful collection.
 
+## One-click Formspree setup
+
+Open [the preconfigured School of the Ancients early-access form claim link](https://formspree.io/claim?name=School+of+the+Ancients+Early+Access&project=school-of-the-ancients&field.email=email%2Crequired%2Cmaxlength%3A254&field.consent=text%2Crequired&field.source=text) and sign into your own Formspree account. The form is configured for required email and consent, plus an optional source field to match the homepage. Formspree will create the form when claimed; this link **does not itself create a live form**. Copy the resulting `https://formspree.io/f/...` endpoint and install it below.
+
+If the claim link fails, use manual setup.
+
 ## Enable collecting signups
 
 1. Create a Formspree account at https://formspree.io and verify the receiving email address.
