@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>School of the Ancients — Join Early Access</title>
-  <meta name="description" content="Learn with AI mentors in immersive worlds. Join the School of the Ancients early-access waitlist." />
+  <title>School of the Ancients — AI Learning in Browser, AR &amp; VR</title>
+  <meta name="description" content="Ask a question, learn with an AI historical mentor, and explore exhibits created on demand. A working browser, AR and VR prototype powered by Matrix Loading Operator." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
     :root { --bg:#0b1020; --text:#e7e9ee; --muted:#9aa4b2; --card:#121a35; --line:#233055; --brand:#8b5cf6; }
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:880px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;border-bottom:1px solid var(--line)}
+    .wrap{max-width:1060px;margin:0 auto;padding:24px}
+    header{display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:12px 0 6px;border-bottom:1px solid var(--line)}
     h1{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:.2rem 0 .6rem}
     .tag{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid var(--line);border-radius:.5rem;color:#a5b4fc;background:rgba(139,92,246,.08)}
     .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
@@ -28,9 +28,37 @@
     .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
     .btn.secondary{background:#0e142b;color:#cbd5e1}
 
+    .brand{display:grid;gap:8px;justify-items:start}
+    nav{align-items:center}
+    a:focus-visible,summary:focus-visible{outline:3px solid #a5b4fc;outline-offset:4px}
+    .hero{padding:clamp(28px,6vw,64px) 0 20px}
+    .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);letter-spacing:-.05em;line-height:1.05;max-width:850px;margin:20px 0}
+    .hero .lead{font-size:clamp(1.05rem,2.5vw,1.25rem);max-width:760px;color:#cbd5e1}
+    .hero .note{font-size:.9rem;max-width:720px}
+    .btn.primary{background:#a78bfa;border-color:#a78bfa;color:#130b2b}
+    .section-heading{margin-top:36px}
+    .section-heading p{margin-top:8px}
+    .products,.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .products .card,.steps .card{margin:0;padding:24px}
+    .products .card:first-child{border-color:#7560bb;background:linear-gradient(140deg,#211b48,#121a35)}
+    .eyebrow{color:#c4b5fd;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .products h3,.steps h3{font-size:1.25rem;margin:14px 0 8px}
+    .products ul{padding-left:18px}
+    .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .step-number{color:#c4b5fd;font-weight:800}
+    .status-list{padding:0;list-style:none}
+    .status-list li{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+    .status-list li:last-child{border:0;padding-bottom:0}
+    .status-label{color:#e7e9ee;font-weight:600}
+    .status-label small{display:block;font-weight:400;color:#a5b4fc;margin-top:3px}
+    .history summary{cursor:pointer;font-weight:600;color:#cbd5e1;padding:8px 0}
+    .history .cta{margin-top:12px}
+    footer{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
+    @media(max-width:700px){.products,.steps{grid-template-columns:1fr}.status-list li{grid-template-columns:1fr;gap:5px}.wrap{padding:18px}header nav{width:100%}.hero{padding-top:32px}.products .card,.steps .card{padding:20px}}
+
     /* Early-access waitlist: native HTML POST to Formspree. */
     .waitlist{margin:28px 0 22px;padding:clamp(22px,5vw,42px);border:1px solid #5540a5;border-radius:18px;background:linear-gradient(135deg,#211b48 0%,#151e39 75%)}
-    .waitlist h1{max-width:700px;margin:14px 0 10px;line-height:1.15}
+    .waitlist h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:700px;margin:14px 0 10px;line-height:1.15}
     .waitlist .intro{max-width:650px;font-size:1.05rem;color:#cbd5e1}
     .waitlist form{margin-top:22px}
     .waitlist label{display:block;margin-bottom:8px;color:#e7e9ee;font-weight:600}
@@ -51,25 +79,88 @@
 <body>
   <div class="wrap">
     <header>
-      <div>
-        <strong>School of the Ancients VR</strong>
-        <span class="tag" title="Work in progress">IN DEVELOPMENT</span>
+      <div class="brand">
+        <strong>School of the Ancients</strong>
+        <span class="tag">WORKING PROTOTYPE</span>
       </div>
-      <nav class="cta">
-        <a class="btn" href="#early-access">Join waitlist</a>
-       <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
-          <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
-          <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
-          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Alpha</a>
+      <nav class="cta" aria-label="Main navigation">
+        <a class="btn primary" href="#early-access">Join waitlist</a>
+        <a class="btn" href="#how-it-works">How it works</a>
+        <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
 
     <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <span class="eyebrow">AI learning · Browser · AR · VR</span>
+        <h1 id="hero-title">Ask a question.<br>Explore the answer.</h1>
+        <p class="lead">Learn with an AI historical mentor. Ask how something works, talk it through, and explore a 3D exhibit created or loaded for your question.</p>
+        <div class="cta">
+          <a class="btn primary" href="#early-access">Get early-access updates</a>
+          <a class="btn" href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener">Watch the Quest 3 demo</a>
+        </div>
+        <p class="note">A working prototype for desktop browsers and compatible AR/VR devices. Quest 3 is the current headset demo; browser and phone interfaces are being refined. You can join the waitlist without a headset.</p>
+      </section>
+
+      <section id="how-it-works" aria-labelledby="products-title">
+        <div class="section-heading">
+          <h2 id="products-title">The learning experience, and the platform beneath it</h2>
+          <p>School of the Ancients brings teaching to the world-building tools in Matrix.</p>
+        </div>
+        <div class="products">
+          <article class="card">
+            <span class="eyebrow">The learning experience</span>
+            <h3>School of the Ancients · Professor</h3>
+            <p>The first learning experience built on Matrix Loading Operator. A Professor guides the conversation and can ask Matrix to create or load an exhibit while you keep learning.</p>
+            <ul>
+              <li>Talk by text or voice with historically inspired AI teachers.</li>
+              <li>Follow short lessons, practice an idea, and see your progress.</li>
+              <li>Explore freely, save your adventure, and return later.</li>
+            </ul>
+            <a href="https://github.com/School-of-the-Ancients/sota-professor" target="_blank" rel="noopener">Professor source and setup →</a>
+          </article>
+          <article class="card">
+            <span class="eyebrow">The creation platform</span>
+            <h3>Matrix Loading Operator</h3>
+            <p>An AI-assisted WebXR sandbox for creating and interacting with digital worlds in a browser, AR or VR. It can be used for open-ended creation as well as teaching.</p>
+            <ul>
+              <li>Request images, panoramic backgrounds, 3D objects and animations.</li>
+              <li>Load reusable assets or generate new exhibits with connected tools.</li>
+              <li>Place, interact with and save the world you build.</li>
+            </ul>
+            <a href="https://github.com/School-of-the-Ancients/matrix-loading-operator" target="_blank" rel="noopener">Matrix source, releases and setup →</a>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="learning-title">
+        <div class="section-heading">
+          <h2 id="learning-title">Start with something you want to understand</h2>
+          <p>For example: “How does electricity work?”</p>
+        </div>
+        <div class="steps">
+          <article class="card"><span class="step-number">01 / ASK</span><h3>Meet your Professor</h3><p>Start with a question. Your mentor helps you reason through it, one idea at a time.</p></article>
+          <article class="card"><span class="step-number">02 / EXPLORE</span><h3>Make the idea visible</h3><p>Matrix can load or create a relevant exhibit, such as a battery, switch and light bulb.</p></article>
+          <article class="card"><span class="step-number">03 / TRY &amp; REFLECT</span><h3>Put it into words</h3><p>Make a prediction, explore what happens, and explain your reasoning. Guided lessons track your progress; free exploration stays available.</p></article>
+        </div>
+        <p>Professors are AI portrayals inspired by historical figures, not authentic voices or recordings. Generated explanations and exhibits can need correction.</p>
+      </section>
+
+      <section class="card" aria-labelledby="status-title">
+        <h2 id="status-title">Where the project is today</h2>
+        <p>The core experience is running. The next stage is making it easier and more reliable for other people to use.</p>
+        <ul class="status-list">
+          <li><span class="status-label">Matrix sandbox<small>Working prototype</small></span><span>World creation, asset loading, panoramas, interaction and saves are implemented. Connected tools and local setup are required.</span></li>
+          <li><span class="status-label">Professor learning<small>Working prototype</small></span><span>AI mentors, text and voice conversation, mini-lessons, objectives and saved progress are implemented. Lesson quality and rewards are still being refined.</span></li>
+          <li><span class="status-label">Browser &amp; devices<small>In progress</small></span><span>Desktop browser learning and Quest AR/VR are the current focus. Phone layouts and device-specific controls need more testing; immersive modes require compatible hardware and a supported browser.</span></li>
+          <li><span class="status-label">Hosted user accounts<small>Planned</small></span><span>Simple signup, isolated user data, hosted creation jobs and multiplayer classrooms are future work. This is not yet a public, self-service hosted product.</span></li>
+        </ul>
+      </section>
 
       <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
-        <span class="tag">EARLY ACCESS</span>
-        <h1 id="waitlist-title">Learn from history's greatest minds.</h1>
-        <p class="intro">Ask questions, explore immersive worlds, and learn with AI mentors. Join the School of the Ancients waitlist for beta invitations and project updates.</p>
+        <span class="tag">PREPARING FOR EARLY USERS</span>
+        <h2 id="waitlist-title">Follow the next stage.</h2>
+        <p class="intro">Join the School of the Ancients waitlist for early-access invitations and project updates. We’re improving the learning experience and preparing a simpler way to get started.</p>
         <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
           <label for="waitlist-email">Email address</label>
           <div class="fields">
@@ -85,71 +176,28 @@
         </form>
       </section>
 
-      <section class="card">
-        <h2>📘 Project Summary</h2>
-        <p><strong>School of the Ancients VR</strong> is an AI-powered, immersive learning platform where students engage with history’s greatest thinkers, scientists, and leaders inside a dynamic VR classroom.</p>
-        <p>The system fuses three layers:</p>
-        <ul>
-          <li><strong>Autonomous AI Company</strong> – a self‑managing AI “faculty” that designs, adapts, and evaluates the curriculum.</li>
-          <li><strong>School of the Ancients VR</strong> – immersive domains where learners meet AI‑emulated historical figures who teach in their own voices and styles.</li>
-          <li><strong>Matrix Operator</strong> – the orchestration layer that spawns environments, assets, and NPCs on command (<em>“Operator, load the Renaissance.”</em>).</li>
-        </ul>
-        <p><em>Core innovation:</em> Socratic Q&amp;A is woven into the experience, so learning becomes a dialogue, not a download. Instead of reading about Galileo, Cleopatra, or Marcus Aurelius, students debate, experiment, and reflect with them inside living worlds.</p>
-      </section>
-
-      <section class="card">
-        <h2># School of the Ancients VR</h2>
-        <p><strong>Ancient wisdom. Modern minds. One classroom.</strong></p>
-        <p>School of the Ancients VR is an immersive educational platform that combines AI, VR, and game mechanics to create dynamic classrooms led by history’s greatest figures.</p>
-      </section>
-
-      <section class="card">
-        <h2>Vision</h2>
-        <p>To make learning as engaging as a game, as immersive as VR, and as personalized as a conversation with a mentor.</p>
-      </section>
-
-      <section class="card">
-        <h2>Core Features</h2>
-        <ul>
-          <li><strong>AI‑Emulated Mentors</strong> — Interact with figures like Socrates, Ada Lovelace, Einstein, Cleopatra, and Marcus Aurelius. Each speaks and teaches in their authentic style.</li>
-          <li><strong>Socratic Q&amp;A</strong> — Instead of passively consuming information, learners engage in guided questioning, debates, and reflective dialogue.</li>
-          <li><strong>Immersive Worlds</strong> — Explore the Athenian Agora, Renaissance Florence, or Einstein’s lab. The environment reinforces the lesson.</li>
-          <li><strong>Adaptive Curriculum</strong> — Lessons evolve based on user knowledge, performance, and curiosity. Knowledge checks are built into the dialogue.</li>
-          <li><strong>Matrix Operator</strong> — A voice‑driven AI that spawns assets, worlds, and NPCs on command: <em>“Operator, load the Roman Forum.”</em></li>
-        </ul>
-      </section>
-
-    
-      <section class="card">
-        <h2>Roadmap</h2>
-        <ul>
-          <li>[ ] Core VR world loader (Matrix Operator)</li>
-          <li>[ ] AI Mentor prompt engine (historical figures)</li>
-          <li>[ ] Socratic dialogue flow with branching questions</li>
-          <li>[ ] Multiplayer classrooms for collaborative debate</li>
-          <li>[ ] Gamification: quests, achievements, unlockable mentors</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>License</h2>
-        <p>MIT License (open for academic and creative projects)</p>
-      </section>
-
-      <section class="card">
-        <h2>Get Involved</h2>
-        <p>Follow progress, open issues, and contribute on GitHub.</p>
+      <section class="card" aria-labelledby="project-title">
+        <h2 id="project-title">Follow the build</h2>
+        <p>Read the setup guides, see current limitations, or contribute on GitHub. The repositories document which features are implemented and which still need testing.</p>
         <div class="cta">
-          <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
-          <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
-          <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
-          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Alpha</a>
+          <a class="btn" href="https://github.com/School-of-the-Ancients/matrix-loading-operator/releases" target="_blank" rel="noopener">Builds &amp; releases</a>
+          <a class="btn" href="https://github.com/School-of-the-Ancients/matrix-loading-operator/blob/main/ROADMAP.md" target="_blank" rel="noopener">Development roadmap</a>
         </div>
+        <details class="history">
+          <summary>Earlier prototypes &amp; project history</summary>
+          <p>The alpha, beta and original VR projects show earlier stages of School of the Ancients. The current Professor experience builds on that work and the Matrix runtime.</p>
+          <div class="cta">
+            <a class="btn secondary" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">Earlier SoTA Beta</a>
+            <a class="btn secondary" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">Earlier SoTA Alpha</a>
+            <a class="btn secondary" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">Original VR project</a>
+          </div>
+        </details>
+        <p>Source-code and asset licenses are documented in their respective repositories; third-party assets and services may have separate terms.</p>
       </section>
     </main>
 
     <footer>
-      © <span id="y"></span> School of the Ancients • In Development
+      © <span id="y"></span> School of the Ancients <span>Powered by Matrix Loading Operator · In development</span>
     </footer>
   </div>
 
