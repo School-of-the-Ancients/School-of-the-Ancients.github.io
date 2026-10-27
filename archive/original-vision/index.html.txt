@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School of the Ancients VR — In Development</title>
+  <meta name="description" content="AI‑powered VR classroom with Socratic mentors. In development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1020; --text:#e7e9ee; --muted:#9aa4b2; --card:#121a35; --line:#233055; --brand:#8b5cf6; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:880px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;border-bottom:1px solid var(--line)}
+    h1{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:.2rem 0 .6rem}
+    .tag{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid var(--line);border-radius:.5rem;color:#a5b4fc;background:rgba(139,92,246,.08)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+    h2{font-size:1.25rem;margin:.2rem 0 .6rem}
+    p{color:var(--muted);line-height:1.65}
+    ul{color:var(--muted);line-height:1.65;padding-left:1.1rem}
+    code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace}
+    a{color:#7dd3fc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin:36px 0 8px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;font-size:.9rem}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
+    .btn.secondary{background:#0e142b;color:#cbd5e1}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <strong>School of the Ancients VR</strong>
+        <span class="tag" title="Work in progress">IN DEVELOPMENT</span>
+      </div>
+      <nav class="cta">
+       <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
+          <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
+          <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
+          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Alpha</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>📘 Project Summary</h2>
+        <p><strong>School of the Ancients VR</strong> is an AI-powered, immersive learning platform where students engage with history’s greatest thinkers, scientists, and leaders inside a dynamic VR classroom.</p>
+        <p>The system fuses three layers:</p>
+        <ul>
+          <li><strong>Autonomous AI Company</strong> – a self‑managing AI “faculty” that designs, adapts, and evaluates the curriculum.</li>
+          <li><strong>School of the Ancients VR</strong> – immersive domains where learners meet AI‑emulated historical figures who teach in their own voices and styles.</li>
+          <li><strong>Matrix Operator</strong> – the orchestration layer that spawns environments, assets, and NPCs on command (<em>“Operator, load the Renaissance.”</em>).</li>
+        </ul>
+        <p><em>Core innovation:</em> Socratic Q&amp;A is woven into the experience, so learning becomes a dialogue, not a download. Instead of reading about Galileo, Cleopatra, or Marcus Aurelius, students debate, experiment, and reflect with them inside living worlds.</p>
+      </section>
+
+      <section class="card">
+        <h2># School of the Ancients VR</h2>
+        <p><strong>Ancient wisdom. Modern minds. One classroom.</strong></p>
+        <p>School of the Ancients VR is an immersive educational platform that combines AI, VR, and game mechanics to create dynamic classrooms led by history’s greatest figures.</p>
+      </section>
+
+      <section class="card">
+        <h2>Vision</h2>
+        <p>To make learning as engaging as a game, as immersive as VR, and as personalized as a conversation with a mentor.</p>
+      </section>
+
+      <section class="card">
+        <h2>Core Features</h2>
+        <ul>
+          <li><strong>AI‑Emulated Mentors</strong> — Interact with figures like Socrates, Ada Lovelace, Einstein, Cleopatra, and Marcus Aurelius. Each speaks and teaches in their authentic style.</li>
+          <li><strong>Socratic Q&amp;A</strong> — Instead of passively consuming information, learners engage in guided questioning, debates, and reflective dialogue.</li>
+          <li><strong>Immersive Worlds</strong> — Explore the Athenian Agora, Renaissance Florence, or Einstein’s lab. The environment reinforces the lesson.</li>
+          <li><strong>Adaptive Curriculum</strong> — Lessons evolve based on user knowledge, performance, and curiosity. Knowledge checks are built into the dialogue.</li>
+          <li><strong>Matrix Operator</strong> — A voice‑driven AI that spawns assets, worlds, and NPCs on command: <em>“Operator, load the Roman Forum.”</em></li>
+        </ul>
+      </section>
+
+    
+      <section class="card">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>[ ] Core VR world loader (Matrix Operator)</li>
+          <li>[ ] AI Mentor prompt engine (historical figures)</li>
+          <li>[ ] Socratic dialogue flow with branching questions</li>
+          <li>[ ] Multiplayer classrooms for collaborative debate</li>
+          <li>[ ] Gamification: quests, achievements, unlockable mentors</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>License</h2>
+        <p>MIT License (open for academic and creative projects)</p>
+      </section>
+
+      <section class="card">
+        <h2>Get Involved</h2>
+        <p>Follow progress, open issues, and contribute on GitHub.</p>
+        <div class="cta">
+          <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
+          <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
+          <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
+          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Alpha</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> School of the Ancients • In Development
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
