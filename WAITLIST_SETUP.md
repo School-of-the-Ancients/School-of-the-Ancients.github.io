@@ -1,6 +1,6 @@
 # Early-access waitlist setup
 
-The School of the Ancients website is hosted on **GitHub Pages**, which cannot directly store email submissions. The form on the homepage is intentionally **disabled until a real Formspree endpoint is configured**. Do not treat UI availability as proof of successful collection.
+The School of the Ancients website is hosted on **GitHub Pages**, which cannot directly store email submissions. The homepage form uses the configured Formspree endpoint below. Do not treat UI availability as proof of successful collection; confirm receipt in the form owner’s dashboard.
 
 ## Formspree configuration
 
