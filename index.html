@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>School of the Ancients — AI Learning in Browser, AR &amp; VR</title>
   <meta name="description" content="Ask a question, learn with an AI historical mentor, and explore exhibits created on demand. A working browser, AR and VR prototype powered by Matrix Loading Operator." />
+  <link rel="canonical" href="https://schooloftheancients.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="School of the Ancients" />
+  <meta property="og:url" content="https://schooloftheancients.com/" />
+  <meta property="og:title" content="School of the Ancients — Ask a question. Explore the answer." />
+  <meta property="og:description" content="Learn with AI historical mentors and explore 3D exhibits in your browser, AR, or VR. Join the early-access list." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="School of the Ancients — Ask a question. Explore the answer." />
+  <meta name="twitter:description" content="AI professors, interactive lessons, and immersive learning. Join early access." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -103,6 +112,28 @@
         <p class="note">A working prototype for desktop browsers and compatible AR/VR devices. Quest 3 is the current headset demo; browser and phone interfaces are being refined. You can join the waitlist without a headset.</p>
       </section>
 
+      <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
+        <span class="tag">PREPARING FOR EARLY USERS</span>
+        <h2 id="waitlist-title">Be among the first to explore.</h2>
+        <p class="intro">Get invited as early access becomes available, watch new demonstrations, and help shape the future of learning with AI professors. No headset required to join.</p>
+        <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
+          <label for="waitlist-email">Email address</label>
+          <div class="fields">
+            <input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" required />
+            <button id="waitlist-submit" type="submit">Join the waitlist</button>
+          </div>
+          <input type="hidden" name="source" value="schooloftheancients.com" />
+          <input type="hidden" id="utm-source" name="utm_source" value="" />
+          <input type="hidden" id="utm-medium" name="utm_medium" value="" />
+          <input type="hidden" id="utm-campaign" name="utm_campaign" value="" />
+          <div class="consent">
+            <input id="waitlist-consent" name="consent" type="checkbox" value="yes" required />
+            <label for="waitlist-consent">Yes, email me about School of the Ancients early access and occasional project updates.</label>
+          </div>
+          <p class="small-print">Your email will be collected through Formspree, used only for these updates, and not posted publicly. You can opt out by replying to an email.</p>
+        </form>
+      </section>
+
       <section id="how-it-works" aria-labelledby="products-title">
         <div class="section-heading">
           <h2 id="products-title">The learning experience, and the platform beneath it</h2>
@@ -168,24 +199,7 @@
         <p>Implemented means present in the prototype, with refinement and device testing still ongoing.</p>
       </section>
 
-      <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
-        <span class="tag">PREPARING FOR EARLY USERS</span>
-        <h2 id="waitlist-title">Follow the next stage.</h2>
-        <p class="intro">Join the School of the Ancients waitlist for early-access invitations and project updates. We’re improving the learning experience and preparing a simpler way to get started.</p>
-        <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
-          <label for="waitlist-email">Email address</label>
-          <div class="fields">
-            <input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" required />
-            <button id="waitlist-submit" type="submit">Join the waitlist</button>
-          </div>
-          <input type="hidden" name="source" value="schooloftheancients.com" />
-          <div class="consent">
-            <input id="waitlist-consent" name="consent" type="checkbox" value="yes" required />
-            <label for="waitlist-consent">Yes, email me about School of the Ancients early access and occasional project updates.</label>
-          </div>
-          <p class="small-print">Your email will be collected through Formspree, used only for these updates, and not posted publicly. You can opt out by replying to an email.</p>
-        </form>
-      </section>
+
 
       <section class="card" aria-labelledby="project-title">
         <h2 id="project-title">Follow the build</h2>
@@ -213,7 +227,17 @@
     </footer>
   </div>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  // Whitelisted campaign tags only: never capture query strings or visitor identity.
+  const campaignParams = new URLSearchParams(window.location.search);
+  for (const [key, id] of [['utm_source', 'utm-source'], ['utm_medium', 'utm-medium'], ['utm_campaign', 'utm-campaign']]) {
+    const value = campaignParams.get(key);
+    if (value && /^[a-zA-Z0-9_-]{1,64}$/.test(value)) {
+      document.getElementById(id).value = value;
+    }
+  }
+</script>
 
 
 </body>
