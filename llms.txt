@@ -8,6 +8,8 @@ School of the Ancients is a working prototype, not an accredited school or a gen
 
 - [Home and current status](https://schooloftheancients.com/): Product overview, prototype capabilities, planned features, and early-access waitlist.
 - [Original vision](https://schooloftheancients.com/history/original-vision.html): Historical context for the project's goals and roadmap.
+- [Blog](https://schooloftheancients.com/blog/): Essays on learning and the ideas behind School of the Ancients.
+- [What the oldest schools knew that an answer machine gets wrong](https://schooloftheancients.com/blog/what-the-oldest-schools-knew/): Plato's Meno doubling-the-square lesson, and what Socrates, Confucius, and Aristotle still show about learning.
 - [Join early-access waitlist](https://schooloftheancients.com/#early-access): Updates and invitations as public access develops.
 
 ## Demonstrations and development
