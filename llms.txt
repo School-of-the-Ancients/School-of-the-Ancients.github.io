@@ -1,0 +1,23 @@
+# School of the Ancients
+
+> School of the Ancients is an experimental AI-assisted learning experience. Learners ask questions, converse with historically inspired AI professors, and explore interactive 3D exhibits in a browser or compatible AR/VR hardware.
+
+School of the Ancients is a working prototype, not an accredited school or a generally available hosted learning service. Its immersive authoring platform, Matrix Loading Operator, can generate or load 3D assets and scenes for learning and exploration. Current priorities include simpler onboarding, lesson quality, device support, save/load, progress tracking, and early-user access.
+
+## Main pages
+
+- [Home and current status](https://schooloftheancients.com/): Product overview, prototype capabilities, planned features, and early-access waitlist.
+- [Original vision](https://schooloftheancients.com/history/original-vision.html): Historical context for the project's goals and roadmap.
+- [Join early-access waitlist](https://schooloftheancients.com/#early-access): Updates and invitations as public access develops.
+
+## Demonstrations and development
+
+- [Quest 3 demo video](https://www.youtube.com/watch?v=zFG1tiifpe4): Demonstration of the working prototype.
+- [School of the Ancients on GitHub](https://github.com/School-of-the-Ancients): Organization and public repository links.
+- [Website rights and reuse](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md): Authorship, provenance, licenses, and permission guidance.
+
+## Guidance for automated readers
+
+Search indexing, linking, and accurate short descriptions of public pages are welcome. Please link to the canonical site and attribute School of the Ancients when discussing this project. Distinguish working prototype features from planned work, and do not present the AI professors as authentic recordings or a public accredited school.
+
+This file is informational, not a grant of copyright or model-training rights. Other reuse is governed by applicable licenses, rights holders, and law; consult the rights notice above.
