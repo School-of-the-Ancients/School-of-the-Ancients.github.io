@@ -56,24 +56,15 @@
     footer{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
     @media(max-width:700px){.products,.steps{grid-template-columns:1fr}.status-list li{grid-template-columns:1fr;gap:5px}.wrap{padding:18px}header nav{width:100%}.hero{padding-top:32px}.products .card,.steps .card{padding:20px}}
 
-    /* Early-access waitlist: native HTML POST to Formspree. */
+    /* Early-access waitlist: Tally embed on a light panel so the form stays readable. */
     .waitlist{margin:28px 0 22px;padding:clamp(22px,5vw,42px);border:1px solid #5540a5;border-radius:18px;background:linear-gradient(135deg,#211b48 0%,#151e39 75%)}
     .waitlist h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:700px;margin:14px 0 10px;line-height:1.15}
     .waitlist .intro{max-width:650px;font-size:1.05rem;color:#cbd5e1}
-    .waitlist form{margin-top:22px}
-    .waitlist label{display:block;margin-bottom:8px;color:#e7e9ee;font-weight:600}
-    .waitlist .fields{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
-    .waitlist input[type=email]{flex:1 1 250px;min-width:0;min-height:46px;padding:12px 14px;border:1px solid #7580aa;border-radius:9px;background:#0b1020;color:#fff;font:inherit}
-    .waitlist input[type=email]:focus-visible,.waitlist button:focus-visible,.waitlist input[type=checkbox]:focus-visible{outline:3px solid #a5b4fc;outline-offset:2px}
-    .waitlist input[type=email]::placeholder{color:#9aa4b2}
-    .waitlist button{min-height:46px;padding:10px 20px;border:0;border-radius:9px;background:#a78bfa;color:#130b2b;font:inherit;font-weight:800;cursor:pointer}
-    .waitlist button:hover:not(:disabled){background:#c4b5fd}
-    .waitlist button:disabled{background:#565471;color:#f0edf8;cursor:not-allowed}
-    .waitlist .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px}
-    .waitlist .consent input{margin-top:3px;width:18px;height:18px;flex-shrink:0;accent-color:#a78bfa}
-    .waitlist .consent label{font-size:.91rem;font-weight:400;line-height:1.5;margin:0}
-    .waitlist .small-print{font-size:.8rem;line-height:1.5;margin:12px 0 0;color:#bac4d5}
-    @media(max-width:560px){.waitlist .fields button{width:100%}}
+    .waitlist .embed{margin-top:22px;max-width:720px;border-radius:12px;background:#fff;overflow:hidden}
+    .waitlist .embed iframe{display:block;width:100%;min-height:280px;border:0;color-scheme:light}
+    .waitlist .fallback{margin:18px 0 0}
+    .waitlist .fallback a{font-weight:700}
+    .waitlist .small-print{max-width:720px;font-size:.8rem;line-height:1.5;margin:14px 0 0;color:#bac4d5}
   </style>
 </head>
 <body>
@@ -172,19 +163,15 @@
         <span class="tag">PREPARING FOR EARLY USERS</span>
         <h2 id="waitlist-title">Follow the next stage.</h2>
         <p class="intro">Join the School of the Ancients waitlist for early-access invitations and project updates. We’re improving the learning experience and preparing a simpler way to get started.</p>
-        <form id="waitlist-form" action="https://formspree.io/f/xvkkkbrq" method="POST">
-          <label for="waitlist-email">Email address</label>
-          <div class="fields">
-            <input id="waitlist-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" required />
-            <button id="waitlist-submit" type="submit">Join the waitlist</button>
-          </div>
-          <input type="hidden" name="source" value="schooloftheancients.com" />
-          <div class="consent">
-            <input id="waitlist-consent" name="consent" type="checkbox" value="yes" required />
-            <label for="waitlist-consent">Yes, email me about School of the Ancients early access and occasional project updates.</label>
-          </div>
-          <p class="small-print">Your email will be collected through Formspree, used only for these updates, and not posted publicly. You can opt out by replying to an email.</p>
-        </form>
+        <div class="embed">
+          <iframe data-tally-src="https://tally.so/embed/o99kJN?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;source=schooloftheancients.com" loading="lazy" width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" title="School of the Ancients early-access waitlist"></iframe>
+        </div>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <noscript>
+          <style>.waitlist .embed{display:none}</style>
+          <p class="fallback"><a href="https://tally.so/r/o99kJN?source=schooloftheancients.com">Join the waitlist</a></p>
+        </noscript>
+        <p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed.</p>
       </section>
 
       <section class="card" aria-labelledby="project-title">

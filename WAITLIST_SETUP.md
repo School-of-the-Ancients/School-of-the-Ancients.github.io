@@ -1,41 +1,41 @@
 # Early-access waitlist setup
 
-The School of the Ancients website is hosted on **GitHub Pages**, which cannot directly store email submissions. The homepage form uses the configured Formspree endpoint below. Do not treat UI availability as proof of successful collection; confirm receipt in the form owner’s dashboard.
+The School of the Ancients website is hosted on **GitHub Pages**, which cannot directly store email submissions. The homepage embeds a published Tally form in the early-access section. Submissions are stored in a private Google Sheet connected to that form. Do not treat the embed appearing on the page as proof of successful collection; confirm receipt in Tally or the connected sheet.
 
-## Formspree configuration
+## Tally configuration
 
-- Configured endpoint: `https://formspree.io/f/xvkkkbrq`.
-- The homepage form uses **native HTML POST**; its button is enabled without JavaScript.
-- It collects a required email, a required explicit consent checkbox, and a source field (`schooloftheancients.com`).
-- All submissions go to the Formspree form account that owns the endpoint, not to GitHub or the static site.
-- Do not treat the configured action as proof of receipt: a real signup should be verified in the Formspree dashboard.
+- Form ID: `o99kJN`.
+- Share URL: `https://tally.so/r/o99kJN`.
+- Embed: `https://tally.so/embed/o99kJN` with `alignLeft=1`, `hideTitle=1`, `transparentBackground=1`, `dynamicHeight=1`, and `source=schooloftheancients.com`.
+- The page uses Tally’s standard iframe embed and loads `https://tally.so/widgets/embed.js`.
+- The form collects a required email and a required consent checkbox. The hidden field named `source` is filled from the `source` URL parameter.
+- If JavaScript is blocked, the section shows a plain link to `https://tally.so/r/o99kJN` with the same `source` parameter.
+- Submissions go to the Tally form and its private Google Sheet, not to GitHub or the static site.
 
-### Final production smoke test
+### Production smoke test
 
-1. Open https://schooloftheancients.com and check the form appears at the top.
-2. Test invalid/empty email and unchecked consent; browser should block submission.
-3. Submit a user-owned test email with checked consent and confirm it appears in the Formspree dashboard.
-4. Check Formspree confirmation, spam protection and owner notifications. Remove the test submission.
-5. Verify the layout on mobile.
+1. Open https://schooloftheancients.com and confirm the embedded form appears in the early-access section.
+2. Submit a user-owned test email with checked consent and confirm it appears in Tally and the private Google Sheet, including `source=schooloftheancients.com`.
+3. Remove the test submission.
+4. Check the layout on mobile and desktop.
+5. With JavaScript disabled, confirm the plain link to the Tally form is available.
 
 ## Behavior and privacy
 
-- The site asks for an email and explicit opt-in to occasional early-access announcements.
-- On successful native form POST, Formspree manages the response/confirmation flow; the website itself does not falsely claim that signup succeeded.
-- With the configured endpoint, the signup button is enabled and submits natively to Formspree.
+- The form asks for an email and explicit opt-in to occasional early-access announcements.
+- Tally handles submission. The website does not claim that signup succeeded.
 - Emails are not committed to GitHub, stored in browser localStorage, or sent to project telemetry.
-- Formspree is the data processor. Limit dashboard access, apply its retention controls, and fulfill opt-outs/deletion requests.
-- Use submitted addresses only for the stated invitation/project-update purpose, not unrelated outreach. Do not bulk-email without honoring unsubscribe/opt-out requests.
-- If you later need double opt-in, segments, and automated unsubscribe links, migrate to an email marketing platform and update the site’s signup disclosures.
+- Signups are collected through Tally and stored in a private Google Sheet. They are not shared publicly.
+- People can opt out by replying to any email or asking to be removed.
+- Limit access to the Tally form and the sheet, and fulfill opt-out and deletion requests.
+- Use submitted addresses only for the stated invitation and project-update purpose.
 
 ## Smoke-test checklist
 
-- [x] A real Formspree endpoint is configured in the HTML.
-- [x] Submit button is enabled and the form uses native POST.
-- [ ] Empty/invalid email cannot be submitted.
-- [ ] Unchecked consent cannot be submitted.
-- [ ] Valid submission is present in Formspree; do not claim success unless verified.
-- [ ] Mobile width displays an accessible input/button without overflow.
-- [ ] Formspree confirmation and user opt-out workflow are verified.
+- [x] Homepage embeds Tally form `o99kJN` and passes `source=schooloftheancients.com`.
+- [x] A plain link fallback is present when JavaScript is blocked.
+- [ ] A valid submission is present in Tally and the private Google Sheet, including the source value.
+- [ ] Mobile and desktop layouts show the embed without overflow.
+- [ ] Opt-out by reply or a removal request can be fulfilled by the form owner.
 
-Official setup guide: https://help.formspree.io/articles/building-your-form/building-an-html-form/
+Embed guide: https://tally.so/help/embed-your-form
