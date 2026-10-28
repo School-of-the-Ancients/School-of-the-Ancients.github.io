@@ -1,63 +1,26 @@
-# Rights, provenance, and reuse
+# Rights
 
-## Repository role
+© 2026 School of the Ancients LLC. All rights reserved unless a file or directory states otherwise.
 
-This is a project website source. Public project website.
-For current School/Matrix application work, start with
-[Professor](https://github.com/School-of-the-Ancients/sota-professor) and
-[Matrix](https://github.com/School-of-the-Ancients/matrix-loading-operator).
-Preserving this repository is not a decision to delete it, stop a deployment,
-or remove a feature from another project.
+School of the Ancients LLC owns the original work in this project. No open-source license is granted by this notice.
 
-## Existing permissions
+The preserved original-vision page still includes an October 2025 line that says “MIT License.” That line is part of the historical snapshot. This repository has no LICENSE file, and this notice does not grant the MIT License.
 
-No standalone general license was identified in the default-branch inventory.
-This notice grants **no new copyright license** and does not declare that no
-permission exists elsewhere. Any valid license or permission previously granted
-in code, a README, a bundle, upstream material, or a separate agreement remains
-in effect. Review those sources before reuse; public availability alone does
-not establish unrestricted commercial permission.
+## Third-party material
 
-The licensing/provenance snapshot for this notice is
-[`27390f6d730a14b50e999e744453d7b4de5795c5`](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/tree/27390f6d730a14b50e999e744453d7b4de5795c5).
-This boundary identifies the material reviewed; it does not retract older
-permissions or imply a complete audit of every earlier distribution.
+This repository does not contain font files, images, audio, video, vendored libraries, or 3D assets. There are no VRoid, pixiv, or other model files.
 
-## Attribution and separate rights
+- **Inter** (weights 400, 600, and 800) is loaded from [Google Fonts](https://fonts.google.com/specimen/Inter) on the homepage, the original-vision page, and the archived snapshot of that page. The font files are not stored here. Inter is copyright The Inter Project Authors and is licensed under the [SIL Open Font License 1.1](https://github.com/rsms/inter/blob/master/LICENSE.txt) ([OFL](https://openfontlicense.org/)).
+- **Tally** supplies the early-access form. The homepage includes Tally’s embed loader, which loads [`https://tally.so/widgets/embed.js`](https://tally.so/widgets/embed.js) and shows the form in an iframe. The widget is Tally’s software under [Tally’s terms](https://tally.so/terms). Submissions stay with Tally; they are not stored in this repository.
 
-Project attribution: **School of the Ancients**, maintained by
-[thetopham](https://github.com/thetopham). Retain each actual author's required
-copyright, permission, and attribution notices. This project attribution is
-not an assertion of sole authorship, a copyright assignment, or ownership of
-third-party material.
+The Quest demo is a link to a YouTube video. The video file is not in this repository.
 
-Website text, logos, screenshots, photographs, embedded media, fonts, and source
-code may have different owners and permissions. Publishing a website does not
-make all those materials freely reusable. Review each source before copying
-or licensing the website as a whole.
+## Names, facts, and trademarks
 
-Git author metadata or AI assistance alone does not prove exclusive ownership or
-copyrightability. There is no claim here to exclusive rights in ideas, facts,
-public-domain works, or another person's name, likeness, voice, or brand.
-No trademark registration, commercial asset clearance, or third-party endorsement
-is asserted. A repository license is not permission to access private accounts,
-publish learner records, or reuse confidential data.
+This notice does not claim rights in historical figures’ names or likenesses, in public-domain works, or in facts and ideas. No trademark registration is asserted. Publishing these pages does not make the text, layout, or other project material free to reuse.
 
-## New work and commercial requests
+## Permission
 
-The current application's prospective licensing proposals are separate:
-[Matrix #280](https://github.com/School-of-the-Ancients/matrix-loading-operator/pull/280)
-and [Professor #48](https://github.com/School-of-the-Ancients/sota-professor/pull/48).
-They do not automatically change this repository. Do not mix differently licensed
-work into this snapshot without documenting the source and applicable terms.
+For any use this notice does not allow, ask for written permission. Contact schooloftheancients2025@gmail.com.
 
-For a use not covered by an existing license, request separate written permission
-from the relevant rights holders. A public issue is not confidential and a request
-is not a license. Contact [the maintainer](https://github.com/thetopham) to arrange
-a private discussion where needed. Before promising an exclusive commercial
-license or assignment, review the chain of title, old distributions, contributor
-agreements, and third-party inputs with qualified counsel.
-
-See the [organization licensing policy](https://github.com/School-of-the-Ancients/.github/blob/9b4090df605b70ce313c198179662e19d3db568d/LICENSING.md) and
-[rights-review checklist](https://github.com/School-of-the-Ancients/.github/blob/9b4090df605b70ce313c198179662e19d3db568d/RIGHTS_REVIEW.md). These explanatory notices
-do not revoke existing grants, override legal exceptions, or guarantee ownership.
+Organization licensing policy: [LICENSING.md](https://github.com/School-of-the-Ancients/.github/blob/main/LICENSING.md). Application repositories: [sota-professor](https://github.com/School-of-the-Ancients/sota-professor) and [matrix-loading-operator](https://github.com/School-of-the-Ancients/matrix-loading-operator).
