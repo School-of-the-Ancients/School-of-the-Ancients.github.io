@@ -1,0 +1,11 @@
+# School of the Ancients — https://schooloftheancients.com/
+# Public pages are open to search engines and AI search crawlers.
+# Access preferences are not a copyright license. See RIGHTS.md in the website repository.
+User-agent: *
+Allow: /
+
+# Explicitly allow ChatGPT Search discovery.
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://schooloftheancients.com/sitemap.xml
