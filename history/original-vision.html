@@ -37,6 +37,9 @@
     a:focus-visible{outline:3px solid #a5b4fc;outline-offset:4px}
     @media(max-width:560px){.wrap{padding:18px}.vision-banner{padding:18px}}
   </style>
+  <!-- Consent-based GA4; disabled until a real G- measurement ID is configured. -->
+  <script defer src="/analytics-config.js"></script>
+  <script defer src="/analytics.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -127,6 +130,7 @@
 
     <footer>
       © <span id="y"></span> School of the Ancients • In Development
+      <button type="button" class="btn secondary" id="analytics-preferences" hidden>Analytics preferences</button>
     </footer>
   </div>
 
