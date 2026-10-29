@@ -103,6 +103,9 @@ This notice does not override existing rights, licenses, or legal exceptions.
     .waitlist .fallback a{font-weight:700}
     .waitlist .small-print{max-width:720px;font-size:.8rem;line-height:1.5;margin:14px 0 0;color:#bac4d5}
   </style>
+  <!-- Consent-based GA4; disabled until a real G- measurement ID is configured. -->
+  <script defer src="/analytics-config.js"></script>
+  <script defer src="/analytics.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -112,9 +115,10 @@ This notice does not override existing rights, licenses, or legal exceptions.
         <span class="tag">WORKING PROTOTYPE</span>
       </div>
       <nav class="cta" aria-label="Main navigation">
-        <a class="btn primary" href="#early-access">Join waitlist</a>
+        <a class="btn primary" href="#early-access" data-analytics-event="waitlist_interest" data-analytics-location="header">Join waitlist</a>
         <a class="btn" href="#how-it-works">How it works</a>
         <a class="btn" href="/history/original-vision.html">Original vision</a>
+        <a class="btn" href="/blog/">Blog</a>
         <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </header>
@@ -125,8 +129,8 @@ This notice does not override existing rights, licenses, or legal exceptions.
         <h1 id="hero-title">Ask a question.<br>Explore the answer.</h1>
         <p class="lead">Learn with an AI historical mentor. Ask how something works, talk it through, and explore a 3D exhibit created or loaded for your question.</p>
         <div class="cta">
-          <a class="btn primary" href="#early-access">Get early-access updates</a>
-          <a class="btn" href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener">Watch the Quest 3 demo</a>
+          <a class="btn primary" href="#early-access" data-analytics-event="waitlist_interest" data-analytics-location="hero">Get early-access updates</a>
+          <a class="btn" href="https://www.youtube.com/watch?v=zFG1tiifpe4" data-analytics-event="demo_click" data-analytics-location="hero" target="_blank" rel="noopener">Watch the Quest 3 demo</a>
         </div>
         <p class="note">A working prototype for desktop browsers and compatible AR/VR devices. Quest 3 is the current headset demo; browser and phone interfaces are being refined. You can join the waitlist without a headset.</p>
       </section>
@@ -146,7 +150,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
               <li>Follow short lessons, practice an idea, and see your progress.</li>
               <li>Explore freely, save your adventure, and return later.</li>
             </ul>
-            <a href="#early-access">Professor early-access updates →</a>
+            <a href="#early-access" data-analytics-event="waitlist_interest" data-analytics-location="professor_card">Professor early-access updates →</a>
           </article>
           <article class="card">
             <span class="eyebrow">The creation platform</span>
@@ -157,7 +161,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
               <li>Load reusable assets or generate new exhibits with connected tools.</li>
               <li>Place, interact with and save the world you build.</li>
             </ul>
-            <a href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener">Watch Matrix in the Quest demo →</a>
+            <a href="https://www.youtube.com/watch?v=zFG1tiifpe4" data-analytics-event="demo_click" data-analytics-location="matrix_card" target="_blank" rel="noopener">Watch Matrix in the Quest demo →</a>
           </article>
         </div>
       </section>
@@ -208,7 +212,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
           <style>.waitlist .embed{display:none}</style>
           <p class="fallback"><a href="https://tally.so/r/o99kJN?source=schooloftheancients.com">Join the waitlist</a></p>
         </noscript>
-        <p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed.</p>
+        <p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed. Separately, optional Google Analytics traffic measurement runs only with your consent; you can change that choice below.</p>
       </section>
 
       <section class="card" aria-labelledby="project-title">
@@ -216,7 +220,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
         <p>Our <a href="/history/original-vision.html">original vision</a> remains a reference for the project’s direction: historical mentors, Socratic dialogue and immersive learning.</p>
         <p>Development repositories are private while the project is refined. Watch the demo, join the waitlist, or contact the creator about collaboration and access.</p>
         <div class="cta">
-          <a class="btn" href="https://www.youtube.com/watch?v=zFG1tiifpe4" target="_blank" rel="noopener">Watch the demo</a>
+          <a class="btn" href="https://www.youtube.com/watch?v=zFG1tiifpe4" data-analytics-event="demo_click" data-analytics-location="follow_build" target="_blank" rel="noopener">Watch the demo</a>
           <a class="btn" href="https://github.com/thetopham" target="_blank" rel="noopener">Contact the creator</a>
         </div>
         <details class="history">
@@ -234,6 +238,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
 
     <footer>
       © <span id="y"></span> School of the Ancients LLC <span>Powered by Matrix Loading Operator · In development · <a href="https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md">Rights &amp; reuse</a></span>
+      <button type="button" class="btn secondary" id="analytics-preferences" hidden>Analytics preferences</button>
     </footer>
   </div>
 
