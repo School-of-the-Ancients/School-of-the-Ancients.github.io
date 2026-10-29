@@ -16,7 +16,7 @@ School of the Ancients is a working prototype, not an accredited school or a gen
 
 - [Quest 3 demo video](https://www.youtube.com/watch?v=zFG1tiifpe4): Demonstration of the working prototype.
 - [School of the Ancients on GitHub](https://github.com/School-of-the-Ancients): Organization and public repository links.
-- [Website rights and reuse](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md): Authorship, provenance, licenses, and permission guidance.
+- [Website rights and reuse](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md): Ownership, third-party material, and how to ask for permission.
 
 ## Guidance for automated readers
 
