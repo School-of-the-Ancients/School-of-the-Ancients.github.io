@@ -1,0 +1,83 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — School of the Ancients</title>
+  <meta name="description" content="Essays from School of the Ancients on learning and the ideas behind the project." />
+  <link rel="canonical" href="https://schooloftheancients.com/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1020; --text:#e7e9ee; --muted:#9aa4b2; --card:#121a35; --line:#233055; --brand:#8b5cf6; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:880px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;border-bottom:1px solid var(--line)}
+    h1{font-size:clamp(1.6rem,3.5vw,2.4rem);margin:.2rem 0 .6rem}
+    .tag{display:inline-block;font-size:.8rem;padding:.25rem .5rem;border:1px solid var(--line);border-radius:.5rem;color:#a5b4fc;background:rgba(139,92,246,.08)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+    h2{font-size:1.25rem;margin:.2rem 0 .6rem}
+    p{color:var(--muted);line-height:1.65}
+    ul{color:var(--muted);line-height:1.65;padding-left:1.1rem}
+    code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace}
+    a{color:#7dd3fc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin:36px 0 8px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;font-size:.9rem}
+    .cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:8px}
+    .btn{display:inline-block;padding:.6rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#101733;color:#dbeafe;font-weight:600}
+    .btn.secondary{background:#0e142b;color:#cbd5e1}
+
+    .vision-banner{border:1px solid #6552a4;background:#211b48;border-radius:12px;padding:20px;margin:24px 0}
+    .vision-banner h1{margin:10px 0}
+    .vision-banner p{color:#cbd5e1;margin:10px 0}
+    .vision-banner a{font-weight:600}
+    header{gap:16px;flex-wrap:wrap}
+    a:focus-visible{outline:3px solid #a5b4fc;outline-offset:4px}
+    @media(max-width:560px){.wrap{padding:18px}.vision-banner{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <strong>School of the Ancients VR</strong>
+        <span class="tag" title="Work in progress">IN DEVELOPMENT</span>
+      </div>
+      <nav class="cta">
+       <a class="btn" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">Github</a>
+          <a class="btn" href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Beta</a>
+          <a class="btn" href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">SoTA Alpha</a>
+          <a class="btn" href="https://github.com/School-of-the-Ancients/school-of-the-ancients-vr" target="_blank" rel="noopener">VR Alpha</a>
+      </nav>
+    </header>
+
+    <main>
+      <p><a href="/">← School of the Ancients</a></p>
+      <h1>Blog</h1>
+      {% for post in site.posts %}
+      <article class="card">
+        <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
+        <p>{{ post.date | date: "%B %d, %Y" }}</p>
+        {% if post.description %}
+        <p>{{ post.description | escape }}</p>
+        {% endif %}
+      </article>
+      {% else %}
+      <p>No posts yet.</p>
+      {% endfor %}
+      <p><a href="/#early-access">Join the early-access waitlist</a></p>
+    </main>
+
+    <footer>
+      © <span id="y"></span> School of the Ancients • In Development
+    </footer>
+  </div>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
