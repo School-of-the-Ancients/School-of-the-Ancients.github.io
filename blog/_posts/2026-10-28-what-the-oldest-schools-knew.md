@@ -61,7 +61,7 @@ None of them is against information. All of them put the learner's own effort at
 
 ## Why School of the Ancients is built this way
 
-This is the idea I started School of the Ancients with: AI should be a mentor, not an answer machine. Today's version looks like this. Ask a question. Explore the answer. Learn with an AI historical mentor. Ask how something works, talk it through, and explore a 3D exhibit of what you asked about.
+This is the idea I started School of the Ancients with. We're building a mentor, not an answer machine: AI that teaches you how to think, not what to memorize. Today's version looks like this. Ask a question. Explore the answer. Learn with an AI historical mentor. Ask how something works, talk it through, and explore a 3D exhibit of what you asked about.
 
 Socrates would recognize one piece of it. Your mentor checks your understanding with a question about the exhibit in front of you, and gives a hint when you ask for one.
 
