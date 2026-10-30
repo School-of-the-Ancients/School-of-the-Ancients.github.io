@@ -122,10 +122,29 @@
     track(eventName, { link_location: element.getAttribute("data-analytics-location") || "site" });
   });
 
-  // Tally's browser event is emitted after a successful embedded form submission.
-  // Do not inspect, log or forward the event detail; it can contain personal data.
-  window.addEventListener("Tally.FormSubmitted", () => {
-    if (document.querySelector('iframe[data-tally-src*="o99kJN"]')) {
+  // Embedded forms use postMessage, not a CustomEvent on the parent page.
+  // Trust only this form's iframe and origin. Never forward answers or identifiers.
+  const submittedEmbeds = new WeakSet();
+  window.addEventListener("message", (event) => {
+    if (!enabled || event.origin !== "https://tally.so") return;
+    const iframe = Array.from(document.querySelectorAll("iframe[data-tally-src]")).find(frame => {
+      if (frame.contentWindow !== event.source) return false;
+      try {
+        const url = new URL(frame.getAttribute("data-tally-src"));
+        return url.origin === event.origin && url.pathname === "/embed/o99kJN";
+      } catch { return false; }
+    });
+    if (!iframe) return;
+    let message;
+    try {
+      if (typeof event.data !== "string" || event.data.length > 262144) return;
+      message = JSON.parse(event.data);
+    } catch { return; }
+    if (message?.payload?.formId !== "o99kJN") return;
+    if (message.event === "Tally.FormLoaded") {
+      submittedEmbeds.delete(iframe);
+    } else if (message.event === "Tally.FormSubmitted" && !submittedEmbeds.has(iframe)) {
+      submittedEmbeds.add(iframe);
       track("generate_lead", { lead_source: "early_access_waitlist" });
     }
   });

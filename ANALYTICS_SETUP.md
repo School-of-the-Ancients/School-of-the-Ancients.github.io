@@ -16,7 +16,7 @@ The website source now supports Google Analytics 4 (GA4) visitor/engagement metr
 - `page_view`, `session_start`, `user_engagement`: ordinary GA4 reporting after consent.
 - `waitlist_interest`: a visitor clicked an on-site waitlist CTA. **Not** a signup.
 - `demo_click`: a visitor clicked the Quest demo link.
-- `generate_lead` with `lead_source=early_access_waitlist`: Tally `Tally.FormSubmitted` event from the embedded waitlist form. No email addresses or form content sent.
+- `generate_lead` with `lead_source=early_access_waitlist`: a `Tally.FormSubmitted` iframe message from the configured waitlist form. The parent verifies the exact Tally origin, sending iframe and form ID, and counts a submission once per form load. No email addresses, answers or submission identifiers are forwarded or stored.
 - Mark `generate_lead` as a **key event** in GA4 after validating with a test submission.
 - To see bounce rate, use GA4 **Reports → Engagement** (customize the report to include bounce rate if needed). GA4 defines bounce as sessions that were not engaged.
 
