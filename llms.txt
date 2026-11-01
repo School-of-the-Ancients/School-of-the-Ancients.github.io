@@ -4,6 +4,8 @@
 
 School of the Ancients is a working prototype, not an accredited school or a generally available hosted learning service. Its immersive authoring platform, Matrix Loading Operator, can generate or load 3D assets and scenes for learning and exploration. Current priorities include simpler onboarding, lesson quality, device support, save/load, progress tracking, and early-user access.
 
+The invitation-only account preview includes sign-in, password recovery, synced adventures and recoverable Trash. Community shares starting questions rather than complete prepared scenes. The preview runs on the creator's computers; always-on hosting, isolated creation workers and broader account access remain in development. Separate account worlds are not multiplayer classrooms.
+
 ## Main pages
 
 - [Home and current status](https://schooloftheancients.com/): Product overview, prototype capabilities, planned features, and early-access waitlist.
