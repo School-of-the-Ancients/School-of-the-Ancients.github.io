@@ -9,7 +9,7 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 - Embed: `https://tally.so/embed/o99kJN` with `alignLeft=1`, `hideTitle=1`, `transparentBackground=1`, `dynamicHeight=1`, and `source=schooloftheancients.com`.
 - The page uses Tally’s standard iframe embed and loads `https://tally.so/widgets/embed.js`.
 - The form collects a required email and a required consent checkbox. The hidden field named `source` is filled from the `source` URL parameter.
-- If JavaScript is blocked, the section shows a plain link to `https://tally.so/r/o99kJN` with the same `source` parameter.
+- A plain “Open the signup form” link is always available above the embed, including when JavaScript is blocked or the embed is delayed. It opens `https://tally.so/r/o99kJN` in a new tab with the same `source` parameter.
 - Submissions go to the Tally form and its private Google Sheet, not to GitHub or the static site.
 
 ### Production smoke test
@@ -18,7 +18,7 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 2. Submit a user-owned test email with checked consent and confirm it appears in Tally and the private Google Sheet, including `source=schooloftheancients.com`.
 3. Remove the test submission.
 4. Check the layout on mobile and desktop.
-5. With JavaScript disabled, confirm the plain link to the Tally form is available.
+5. Confirm the direct signup link opens the Email and Consent fields. With JavaScript disabled, the empty embed is hidden and the same plain link remains available.
 
 ## Behavior and privacy
 
