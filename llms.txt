@@ -6,6 +6,12 @@ School of the Ancients is a working prototype, not an accredited school or a gen
 
 The local account prototype includes sign-in, password recovery, synced adventures and recoverable Trash. Community shares starting questions rather than complete prepared scenes. Hosted access is in development and testing and has not yet been verified end to end. Broader account access and reliable always-on availability remain in development. Separate account worlds are not multiplayer classrooms.
 
+- domain: schooloftheancients.com
+- language: en
+- category: Experimental AI-assisted immersive learning
+- keywords: immersive learning, AI professors, historical mentors, 3D exhibits, augmented reality, virtual reality
+- last_updated: 2026-11-01
+
 ## Main pages
 
 - [Home and current status](https://schooloftheancients.com/): Product overview, prototype capabilities, planned features, and early-access waitlist.
