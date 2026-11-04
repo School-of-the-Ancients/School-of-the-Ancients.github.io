@@ -119,14 +119,17 @@ This notice does not override existing rights, licenses, or legal exceptions.
       <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
         <div><span class="eyebrow status-dot">For the curious</span><h2 id="waitlist-title">Be part of<br>what comes next.</h2><p class="intro">Join the waitlist for early-access invitations and occasional project updates. Bring your questions. We’ll let you know as the next stage opens up.</p><p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed. Read our <a href="/privacy/">privacy notice</a> before signing up. Optional Google Analytics runs only with your consent; change that choice under Analytics preferences.</p></div>
         <div>
+          <label for="waitlist-age">Your age range</label>
+          <select id="waitlist-age"><option value="">Choose your age range</option><option value="under13">Under 13</option><option value="13-17">13–17</option><option value="18+">18 or older</option></select>
+          <p id="waitlist-age-note" role="status">The waitlist is for people age 13 and older. Your selection is used on this page only.</p>
           <p id="waitlist-disclosure">The signup form is hosted by Tally. Loading it connects your browser to Tally, which receives connection information such as your IP address. This choice is separate from optional website analytics.</p>
-          <button class="button primary" id="load-waitlist" type="button" aria-controls="waitlist-embed">Load signup form</button>
+          <button class="button primary" id="load-waitlist" type="button" disabled aria-controls="waitlist-embed">Load signup form</button>
           <p id="waitlist-status" role="status"></p>
           <div class="embed" id="waitlist-embed" hidden>
             <iframe data-tally-src="https://tally.so/embed/o99kJN?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1" loading="lazy" width="100%" height="500" title="School of the Ancients early-access waitlist" referrerpolicy="no-referrer"></iframe>
           </div>
-          <p class="fallback">Or <a href="https://tally.so/r/o99kJN" target="_blank" rel="noopener noreferrer">open the form on Tally</a>. That also connects you to Tally.</p>
-          <noscript><p>JavaScript is off. Use the link above to open the signup form.</p></noscript>
+          <p class="fallback" id="waitlist-direct" hidden>Or <a href="https://tally.so/r/o99kJN" target="_blank" rel="noopener noreferrer">open the form on Tally</a>. That also connects you to Tally.</p>
+          <noscript><p>Enable JavaScript to use the age screen, or email matt@schooloftheancients.com for help with the waitlist.</p></noscript>
           <script defer src="/waitlist.js"></script>
         </div>
       </section>

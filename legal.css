@@ -1,1 +1,2 @@
 .legal{max-width:900px}.legal main{padding:42px 0}.legal h1{font-size:clamp(34px,6vw,52px);letter-spacing:-1px}.legal h2{font-size:26px;letter-spacing:-.5px;margin:34px 0 12px}.legal p{max-width:75ch}.legal footer nav{flex-wrap:wrap;gap:12px;font-size:12px}#waitlist-disclosure{font-size:13px}#waitlist-status{font-size:13px;margin:12px 0}
+#waitlist-age{display:block;font:inherit;width:100%;max-width:320px;padding:10px;margin:8px 0}#waitlist-age-note{font-size:13px}.button:disabled{opacity:.55;cursor:not-allowed}
