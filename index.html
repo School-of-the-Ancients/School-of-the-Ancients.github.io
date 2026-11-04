@@ -98,7 +98,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
           <article class="step"><span class="step-number">02</span><h3>Give the idea a shape.</h3><p>Your professor can request a 3D exhibit, loaded from the catalog or created with connected tools. Conversation can continue while it prepares.</p></article>
           <article class="step"><span class="step-number">03</span><h3>Explore it together.</h3><p>Point to a part. Ask what it does. The professor can refer to the selected object and describe its parts, helping you connect the explanation to what you see.</p></article>
         </div>
-        <p class="learning-note">Professors are AI portrayals inspired by historical figures, not authentic voices or recordings. AI explanations and generated exhibits can need correction. Exhibit preparation takes time; this is a working prototype.</p>
+        <p class="learning-note">Professors are AI portrayals inspired by historical figures, not authentic voices or recordings. The project is not affiliated with or endorsed by those people, their estates, or associated institutions. AI explanations and generated exhibits can need correction. Exhibit preparation takes time; this is a working prototype.</p>
       </section>
       <section class="field-note" aria-labelledby="matrix-title">
         <div><span class="eyebrow">The world behind the lesson</span><h2 id="matrix-title">A conversation with room for discovery.</h2></div>
@@ -117,21 +117,24 @@ This notice does not override existing rights, licenses, or legal exceptions.
         </div>
       </section>
       <section class="waitlist" id="early-access" aria-labelledby="waitlist-title">
-        <div><span class="eyebrow status-dot">For the curious</span><h2 id="waitlist-title">Be part of<br>what comes next.</h2><p class="intro">Join the waitlist for early-access invitations and occasional project updates. Bring your questions. We’ll let you know as the next stage opens up.</p><p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed. Optional Google Analytics runs only with your consent; change that choice under Analytics preferences.</p></div>
+        <div><span class="eyebrow status-dot">For the curious</span><h2 id="waitlist-title">Be part of<br>what comes next.</h2><p class="intro">Join the waitlist for early-access invitations and occasional project updates. Bring your questions. We’ll let you know as the next stage opens up.</p><p class="small-print">Signups are collected through Tally and stored in a private Google Sheet. They are used only for these updates and are not shared publicly. You can opt out by replying to any email or asking to be removed. Read our <a href="/privacy/">privacy notice</a> before signing up. Optional Google Analytics runs only with your consent; change that choice under Analytics preferences.</p></div>
         <div>
-          <p class="fallback">Form not loading? <a href="https://tally.so/r/o99kJN?source=schooloftheancients.com" target="_blank" rel="noopener">Open the signup form <span aria-hidden="true">&#8599;</span></a></p>
-        <div class="embed">
-          <iframe data-tally-src="https://tally.so/embed/o99kJN?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;source=schooloftheancients.com" loading="lazy" width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" title="School of the Ancients early-access waitlist"></iframe>
-        </div>
-        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-          <noscript><style>.waitlist .embed{display:none}</style></noscript>
+          <p id="waitlist-disclosure">The signup form is hosted by Tally. Loading it connects your browser to Tally, which receives connection information such as your IP address. This choice is separate from optional website analytics.</p>
+          <button class="button primary" id="load-waitlist" type="button" aria-controls="waitlist-embed">Load signup form</button>
+          <p id="waitlist-status" role="status"></p>
+          <div class="embed" id="waitlist-embed" hidden>
+            <iframe data-tally-src="https://tally.so/embed/o99kJN?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1" loading="lazy" width="100%" height="500" title="School of the Ancients early-access waitlist" referrerpolicy="no-referrer"></iframe>
+          </div>
+          <p class="fallback">Or <a href="https://tally.so/r/o99kJN" target="_blank" rel="noopener noreferrer">open the form on Tally</a>. That also connects you to Tally.</p>
+          <noscript><p>JavaScript is off. Use the link above to open the signup form.</p></noscript>
+          <script defer src="/waitlist.js"></script>
         </div>
       </section>
       <section class="project-links" aria-label="Follow the project"><p>Ancient curiosity.<br>New possibilities.</p><div class="actions"><a class="text-link" href="/history/original-vision.html">Our original vision ↗</a><a class="text-link" href="/blog/">Journal ↗</a><a class="text-link" href="https://github.com/School-of-the-Ancients" target="_blank" rel="noopener">GitHub ↗</a><a class="text-link" href="mailto:matt@schooloftheancients.com">Email the creator ↗</a></div></section>
-      <details class="history"><summary>Earlier prototypes &amp; project history</summary><p>The alpha, beta and original VR projects show earlier stages. The current Professor experience builds on that work and the Matrix runtime. Development repositories are private while the project is refined; contact the creator about collaboration and source access.</p><div class="actions"><a href="https://beta.schooloftheancients.com/" target="_blank" rel="noopener">Earlier SoTA Beta ↗</a><a href="https://alpha.schooloftheancients.com/" target="_blank" rel="noopener">Earlier SoTA Alpha ↗</a><a href="/history/original-vision.html">Original project vision ↗</a></div></details>
+      <details class="history"><summary>Earlier prototypes &amp; project history</summary><p>The alpha, beta and original VR projects show earlier stages. The current Professor experience builds on that work and the Matrix runtime. Development repositories are private while the project is refined; contact the creator about collaboration and source access.</p><div class="actions"><a href="/history/prototypes.html#beta" target="_blank" rel="noopener">Earlier SoTA Beta ↗</a><a href="/history/prototypes.html#alpha" target="_blank" rel="noopener">Earlier SoTA Alpha ↗</a><a href="/history/original-vision.html">Original project vision ↗</a></div></details>
       <p class="rights-note">Source access is by arrangement. Existing valid licenses for previously distributed code and assets remain unchanged; third-party materials and services have their own terms.</p>
     </main>
-    <footer><span>© <span id="y"></span> School of the Ancients LLC</span><div class="footer-links"><span>Powered by Matrix Loading Operator</span><a href="https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md">Rights &amp; reuse</a><button type="button" id="analytics-preferences" hidden>Analytics preferences</button></div></footer>
+    <footer><span>© <span id="y"></span> School of the Ancients LLC</span><div class="footer-links"><span>Powered by Matrix Loading Operator</span><a href="https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md">Rights &amp; reuse</a><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/copyright/">Copyright concerns</a><button type="button" id="analytics-preferences" hidden>Analytics preferences</button></div></footer>
   </div>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
