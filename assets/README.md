@@ -18,3 +18,5 @@ does not change existing source, avatar, recording, or third-party rights. See
 
 HTML, CSS, and copy in this redesign were produced with AI assistance and reviewed
 locally before publication.
+
+As of November 6, 2026, the screenshot is excluded from website deployment and the homepage no longer promotes the linked demo. Publication can resume after the depicted assets, likenesses, audio and branding have been reviewed. The original repository evidence is retained.

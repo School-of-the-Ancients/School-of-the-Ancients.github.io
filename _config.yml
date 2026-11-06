@@ -1,0 +1,5 @@
+# Retain historical evidence in the repository without publishing it as site content.
+exclude:
+  - archive
+  - tests
+  - assets/tesla-exhibit.jpg
