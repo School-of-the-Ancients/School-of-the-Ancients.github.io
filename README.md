@@ -2,7 +2,7 @@
 
 > **Repository status:** Public project website. See [rights and reuse](RIGHTS.md).
 > For current application development, start with [Professor](https://github.com/School-of-the-Ancients/sota-professor)
-> and [Matrix](https://github.com/School-of-the-Ancients/matrix-loading-operator).
+> and the [dynamic creation platform](https://github.com/School-of-the-Ancients/matrix-loading-operator).
 > Earlier descriptions below refer to this repository's own checkpoint; existing license grants remain intact.
 
 This repository contains the public project website. Review [RIGHTS.md](RIGHTS.md)
