@@ -6,19 +6,19 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 
 - Form ID: `o99kJN`.
 - Share URL: `https://tally.so/r/o99kJN`.
-- Embed: `https://tally.so/embed/o99kJN` with `alignLeft=1`, `hideTitle=1`, `transparentBackground=1`, `dynamicHeight=1`, and `source=schooloftheancients.com`.
-- The page uses Tally’s standard iframe embed and loads `https://tally.so/widgets/embed.js`.
-- The form collects a required email and a required consent checkbox. The hidden field named `source` is filled from the `source` URL parameter.
-- A plain “Open the signup form” link is always available above the embed, including when JavaScript is blocked or the embed is delayed. It opens `https://tally.so/r/o99kJN` in a new tab with the same `source` parameter.
+- Embed: `https://tally.so/embed/o99kJN` with `alignLeft=1`, `hideTitle=1`, and `transparentBackground=1`.
+- The homepage displays an age selector before loading the iframe or enabling the direct link. Only “18 or older” unlocks these options. Selecting “Load signup form” then connects to Tally. The age selection stays in the visitor’s browser.
+- With JavaScript disabled, the site provides a contact address for waitlist help.
+- The public share URL is managed in Tally. Keep its eligibility requirement in the form itself so it also applies to visitors who use a saved link.
 - Submissions go to the Tally form and its private Google Sheet, not to GitHub or the static site.
 
 ### Production smoke test
 
-1. Open https://schooloftheancients.com and confirm the embedded form appears in the early-access section.
-2. Submit a user-owned test email with checked consent and confirm it appears in Tally and the private Google Sheet, including `source=schooloftheancients.com`.
-3. Remove the test submission.
-4. Check the layout on mobile and desktop.
-5. Confirm the direct signup link opens the Email and Consent fields. With JavaScript disabled, the empty embed is hidden and the same plain link remains available.
+1. Open the early-access section on mobile and desktop. Check that leaving the age blank or selecting “Under 18” keeps the form and direct link closed.
+2. Select “18 or older.” Check that the direct link opens the published form and that “Load signup form” loads the iframe. Switch back to “Under 18” and check that both routes close again.
+3. Open the Tally share URL directly and check that a new applicant must confirm they are 18 or older to join.
+4. With JavaScript disabled, check that waitlist help is visible.
+5. When verifying delivery, use an authorized test signup and check its receipt in Tally and the connected sheet.
 
 ## Behavior and privacy
 
@@ -32,9 +32,9 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 
 ## Smoke-test checklist
 
-- [x] Homepage embeds Tally form `o99kJN` and passes `source=schooloftheancients.com`.
-- [x] A plain link fallback is present when JavaScript is blocked.
-- [ ] A valid submission is present in Tally and the private Google Sheet, including the source value.
+- [ ] Both homepage routes enforce the adult age selection.
+- [ ] The standalone form requires an adult declaration.
+- [ ] A valid submission reaches Tally and the private Google Sheet.
 - [ ] Mobile and desktop layouts show the embed without overflow.
 - [ ] Opt-out by reply or a removal request can be fulfilled by the form owner.
 

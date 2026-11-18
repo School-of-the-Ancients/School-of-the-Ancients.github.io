@@ -7,23 +7,31 @@
   const age = document.getElementById('waitlist-age');
   const note = document.getElementById('waitlist-age-note');
   const direct = document.getElementById('waitlist-direct');
-  const eligible = () => age && ['13-17', '18+'].includes(age.value);
   if (!button || !embed || !age) return;
-  age.addEventListener('change', () => {
-    button.disabled = !eligible();
-    if (direct) direct.hidden = !eligible();
-    if (note) note.textContent = age.value === 'under13'
-      ? 'We cannot accept waitlist signups from people under 13. Please do not submit the form.'
-      : age.value === '13-17'
-      ? 'You can join the waitlist for updates. You must be 18 or older to create a School account. Please discuss joining the waitlist with a parent or guardian.'
-      : 'Your selection is used on this page only; it is not sent to Tally.';
-    if (!eligible()) {
+  const eligible = () => age.value === '18+';
+  function updateAgeGate() {
+    const adult = eligible();
+    button.disabled = !adult;
+    if (direct) {
+      const link = direct.querySelector('a');
+      if (adult) link.href = 'https://tally.so/r/o99kJN';
+      else link.removeAttribute('href');
+      direct.hidden = !adult;
+    }
+    if (note) note.textContent = adult
+      ? 'You can now load the signup form or open it on Tally.'
+      : 'You must be 18 or older to join the waitlist or create a School account.';
+    if (!adult) {
       embed.querySelector('iframe[data-tally-src]')?.removeAttribute('src');
       embed.hidden = true;
       button.hidden = false;
       if (status) status.textContent = '';
     }
-  });
+  }
+  updateAgeGate();
+  age.addEventListener('change', updateAgeGate);
+  const help = document.getElementById('waitlist-help');
+  if (help) help.hidden = true;
   button.addEventListener('click', () => {
     if (!eligible()) return;
     const frame = embed.querySelector('iframe[data-tally-src]');
