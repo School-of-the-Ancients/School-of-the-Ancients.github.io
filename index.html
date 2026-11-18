@@ -13,12 +13,12 @@ This notice does not override existing rights, licenses, or legal exceptions.
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>School of the Ancients — AI Learning in Browser, AR &amp; VR</title>
-  <meta name="description" content="Ask a question or choose a School Library exhibit. Watch the public Quest demo and join the waitlist for this invitation-only learning experience." />
+  <meta name="description" content="Watch a Quest AR demo and two browser lesson clips. School of the Ancients works in desktop and mobile browsers and in AR on Meta Quest 3. Playable access is by invitation." />
   <link rel="canonical" href="https://schooloftheancients.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="School of the Ancients" />
   <meta property="og:title" content="School of the Ancients — AI Learning in Browser, AR &amp; VR" />
-  <meta property="og:description" content="Explore a 3D exhibit with an AI professor. Watch the Quest demo or join the early-access waitlist." />
+  <meta property="og:description" content="See Leonardo’s aerial screw and Faraday’s generator in motion. Explore the invitation-only School in a desktop or mobile browser, or in AR on Meta Quest 3." />
   <meta property="og:url" content="https://schooloftheancients.com/" />
   <meta property="og:image" content="https://schooloftheancients.com/assets/vesper-spacecraft.webp" />
   <meta property="og:image:alt" content="Vesper, a solar-electric spacecraft from the School Library" />
@@ -38,7 +38,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
         "@type": "WebSite",
         "name": "School of the Ancients",
         "url": "https://schooloftheancients.com/",
-        "description": "A browser, AR and VR AI learning prototype with historically inspired AI mentors and a dynamic creation platform.",
+        "description": "An AI learning prototype for desktop and mobile browsers and Meta Quest 3 AR, with historically inspired AI mentors and interactive 3D exhibits.",
         "publisher": {"@type": "Organization", "name": "School of the Ancients"}
       }
     ]
@@ -59,6 +59,7 @@ This notice does not override existing rights, licenses, or legal exceptions.
       </a>
       <nav aria-label="Main navigation">
         <a class="desktop-link" href="#how-it-works">The experience</a>
+        <a class="desktop-link" href="#lesson-clips">Lesson clips</a>
         <a class="desktop-link" href="#status">Where we are</a>
         <a class="desktop-link" href="/blog/">Journal</a>
         <a class="button primary" href="#early-access" data-analytics-event="waitlist_interest" data-analytics-location="header">Join the waitlist <span aria-hidden="true">↗</span></a>
@@ -68,12 +69,12 @@ This notice does not override existing rights, licenses, or legal exceptions.
       <section class="hero" aria-labelledby="hero-title">
         <div>
           <h1 id="hero-title">Can sunlight power <em>a spaceship?</em></h1>
-          <p class="lead">Bring a question like this to an AI professor, or choose a finished exhibit from the School Library. In your browser or Quest headset, select the part you’re curious about and talk through how it works.</p>
+          <p class="lead">Bring a question like this to an AI professor, or choose a finished exhibit from the School Library. Explore it in a desktop or mobile browser, or point to its parts with your hands in AR on Meta Quest 3.</p>
           <div class="actions">
             <a class="button primary" href="#early-access" data-analytics-event="waitlist_interest" data-analytics-location="hero">Join the waitlist <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="https://devpost.com/software/school-of-the-ancients-t275sh">Watch the 2:59 Quest demo on Devpost <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="note">The playable build is invitation-only. Anyone can watch the demo.</p>
+          <p class="note">The playable build is invitation-only. Anyone can watch the demo or <a href="#lesson-clips">preview two browser lessons</a>.</p>
         </div>
         <figure class="exhibit-preview">
           <div class="exhibit-image"><img src="/assets/vesper-spacecraft.webp" width="1080" height="680" fetchpriority="high" alt="Vesper’s two blue solar-panel wings flank the hull, with two thrusters at the rear."></div>
@@ -90,6 +91,34 @@ This notice does not override existing rights, licenses, or legal exceptions.
         <span><i aria-hidden="true">◇</i><strong>An idea to explore</strong> 3D exhibits</span>
         <span><i aria-hidden="true">↗</i><strong>A world to step into</strong> Browser · AR · VR</span>
       </div>
+      <section class="section lesson-gallery" id="lesson-clips" aria-labelledby="lesson-clips-title">
+        <div class="section-intro">
+          <h2 id="lesson-clips-title">Exhibits in motion</h2>
+          <p>Two short, silent recordings from School Library lessons in the desktop browser.</p>
+        </div>
+        <div class="lesson-films">
+          <figure>
+            <video controls playsinline muted preload="none" width="672" height="504" poster="/assets/lessons/aerial-screw.webp" aria-labelledby="aerial-screw-title" aria-describedby="aerial-screw-description">
+              <source src="/assets/lessons/aerial-screw.mp4" type="video/mp4">
+              <a href="/assets/lessons/aerial-screw.mp4">Watch the aerial screw clip</a>.
+            </video>
+            <figcaption>
+              <h3 id="aerial-screw-title">Could Leonardo’s spinning sail lift its crew?</h3>
+              <p id="aerial-screw-description">The crew turns a shaft beneath the aerial screw. The professor’s purple pointer picks out the linen sail that winds around it.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <video controls playsinline muted preload="none" width="720" height="540" poster="/assets/lessons/faraday-generator.webp" aria-labelledby="faraday-title" aria-describedby="faraday-description">
+              <source src="/assets/lessons/faraday-generator.mp4" type="video/mp4">
+              <a href="/assets/lessons/faraday-generator.mp4">Watch the generator clip</a>.
+            </video>
+            <figcaption>
+              <h3 id="faraday-title">Does the magnet have to move?</h3>
+              <p id="faraday-description">A red-and-blue magnet turns inside a fixed copper coil in Faraday’s generator. Follow the wire from the coil to the lamp on the right.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
       <section class="section" id="how-it-works" aria-labelledby="experience-title">
         <div class="section-intro">
           <div><h2 id="experience-title">Inside a lesson</h2></div>

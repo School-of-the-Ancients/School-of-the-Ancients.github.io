@@ -2,7 +2,7 @@
 
 > School of the Ancients is an experimental AI-assisted learning experience. Learners ask questions, converse with historically inspired AI professors, and explore interactive 3D exhibits in a browser or compatible AR/VR hardware.
 
-The hosted build is invitation-only. Public visitors can watch a recorded Quest lesson and join the email waitlist. Learners with access can ask an original question, have a 3D exhibit built in Blender, or begin with a saved demonstration from the School Library.
+The hosted build is invitation-only. Public visitors can watch a recorded Quest AR lesson, play two short desktop exhibit clips, and join the 18+ email waitlist. Learners with access can ask an original question, have a 3D exhibit built in Blender, or begin with a saved demonstration from the School Library.
 
 Lesson conversations, objectives, and saved adventures are scoped to the learner’s account. Completed lessons can offer follow-up questions grounded in that conversation. Desktop and mobile browsers are supported. Immersive AR requires a compatible headset or phone and browser.
 
@@ -22,6 +22,7 @@ Lesson conversations, objectives, and saved adventures are scoped to the learner
 
 ## Demonstrations and development
 
+- [Browser lesson clips](https://schooloftheancients.com/#lesson-clips) — Silent desktop recordings of Leonardo’s aerial screw and Faraday’s generator.
 - [2026 Meta VR Start Developer Competition entry](https://devpost.com/software/school-of-the-ancients-t275sh) — Public three-minute Quest demonstration and project story.
 - [School of the Ancients on GitHub](https://github.com/School-of-the-Ancients): Organization and public repository links.
 - [Website rights and reuse](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md): Ownership, third-party material, and how to ask for permission.
