@@ -1,5 +1,11 @@
 # Homepage media
 
+## Vesper spacecraft
+
+The homepage uses a Blender render of the original AI-assisted solar-electric ship from the School Library lesson *How Ion Thrusters Move a Spaceship*. The model is shown on a transparent background. The learner builds a different spacecraft in the public contest recording.
+
+## Archived prototype capture
+
 `tesla-exhibit.jpg` is a still extracted at 00:01:44 from the project's existing
 `tesla-demo-fast.mp4` recording in the creator's `sota-professor-progress` folder.
 It was scaled to 1600 × 900 and encoded as JPEG (about 108 KiB); the original

@@ -2,15 +2,15 @@
 
 > School of the Ancients is an experimental AI-assisted learning experience. Learners ask questions, converse with historically inspired AI professors, and explore interactive 3D exhibits in a browser or compatible AR/VR hardware.
 
-School of the Ancients is a working prototype, not an accredited school or a generally available hosted learning service. Its dynamic creation platform can generate or load 3D assets and scenes for learning and exploration. Current priorities include simpler onboarding, lesson quality, device support, save/load, progress tracking, and early-user access.
+The hosted build is invitation-only. Public visitors can watch a recorded Quest lesson and join the email waitlist. Learners with access can ask an original question, have a 3D exhibit built in Blender, or begin with a saved demonstration from the School Library.
 
-The local account prototype includes sign-in, password recovery, synced adventures and recoverable Trash. Community shares starting questions rather than complete prepared scenes. Hosted access is in development and testing and has not yet been verified end to end. Broader account access and reliable always-on availability remain in development. Separate account worlds are not multiplayer classrooms.
+Lesson conversations, objectives, and saved adventures are scoped to the learner’s account. Completed lessons can offer follow-up questions grounded in that conversation. Desktop and mobile browsers are supported. Immersive AR requires a compatible headset or phone and browser.
 
 - domain: schooloftheancients.com
 - language: en
 - category: Experimental AI-assisted immersive learning
 - keywords: immersive learning, AI professors, historical mentors, 3D exhibits, augmented reality, virtual reality
-- last_updated: 2026-11-01
+- last_updated: 2026-11-18
 
 ## Main pages
 
@@ -22,7 +22,7 @@ The local account prototype includes sign-in, password recovery, synced adventur
 
 ## Demonstrations and development
 
-- [Quest 3 demo video](https://www.youtube.com/watch?v=zFG1tiifpe4): Demonstration of the working prototype.
+- [2026 Meta VR Start Developer Competition entry](https://devpost.com/software/school-of-the-ancients-t275sh) — Public three-minute Quest demonstration and project story.
 - [School of the Ancients on GitHub](https://github.com/School-of-the-Ancients): Organization and public repository links.
 - [Website rights and reuse](https://github.com/School-of-the-Ancients/School-of-the-Ancients.github.io/blob/main/RIGHTS.md): Ownership, third-party material, and how to ask for permission.
 
