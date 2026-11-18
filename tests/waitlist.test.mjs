@@ -16,13 +16,15 @@ function page(url = 'https://tally.so/embed/o99kJN?alignLeft=1') {
   const elements = {'load-waitlist': button, 'waitlist-embed': embed, 'waitlist-status': status,
     'waitlist-age': age, 'waitlist-direct': direct, 'waitlist-age-note': {}};
   vm.runInNewContext(source, {document: {getElementById: id => elements[id]}, URL});
-  return {frame, button, embed, status, direct, choose: value => {age.value = value; change();}, click: () => click()};
+  return {frame, button, embed, status, direct, ageNote: elements['waitlist-age-note'],
+    choose: value => {age.value = value; change();}, click: () => click()};
 }
 test('does not load Tally until requested and loads only once', () => {
   const p = page();
   assert.equal(p.frame.src, undefined);
   assert.equal(p.embed.hidden, true);
   p.choose('13-17');
+  assert.match(p.ageNote.textContent, /18 or older to create a School account/);
   p.click();
   assert.equal(p.frame.src, 'https://tally.so/embed/o99kJN?alignLeft=1');
   assert.equal(p.embed.hidden, false);
@@ -57,5 +59,13 @@ test('homepage has no automatically loaded Tally widget or iframe', async () => 
   for (const path of ['privacy', 'terms', 'copyright']) {
     assert.ok(html.includes(`href="/${path}/"`));
     await readFile(new URL(`../${path}/index.html`, import.meta.url), 'utf8');
+  }
+});
+
+test('public account notices give the adult signup age and the separate waitlist age', async () => {
+  for (const path of ['index.html', 'terms/index.html', 'privacy/index.html']) {
+    const html = await readFile(new URL(`../${path}`, import.meta.url), 'utf8');
+    assert.match(html, /18 or older to create (?:an account|a School account)/, path);
+    assert.match(html, /waitlist[^.]*age 13/i, path);
   }
 });

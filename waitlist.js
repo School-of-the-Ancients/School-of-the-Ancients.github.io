@@ -15,7 +15,7 @@
     if (note) note.textContent = age.value === 'under13'
       ? 'We cannot accept waitlist signups from people under 13. Please do not submit the form.'
       : age.value === '13-17'
-      ? 'Please discuss the experimental service with a parent or guardian. Do not include private or sensitive information.'
+      ? 'You can join the waitlist for updates. You must be 18 or older to create a School account. Please discuss joining the waitlist with a parent or guardian.'
       : 'Your selection is used on this page only; it is not sent to Tally.';
     if (!eligible()) {
       embed.querySelector('iframe[data-tally-src]')?.removeAttribute('src');
