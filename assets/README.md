@@ -4,6 +4,10 @@
 
 The homepage uses a Blender render of the original AI-assisted solar-electric ship from the School Library lesson *How Ion Thrusters Move a Spaceship*. The model is shown on a transparent background. The learner builds a different spacecraft in the public contest recording.
 
+## Desktop lesson clips
+
+The creator supplied two desktop recordings on November 18, 2026 for the public project website. `lessons/aerial-screw.mp4` shows the rotating sail and teaching pointer. `lessons/faraday-generator.mp4` shows the magnet turning inside its coil. Both MP4s are silent crops of the tabletop exhibits. Each WebP poster is a frame from its corresponding recording.
+
 ## Archived prototype capture
 
 `tesla-exhibit.jpg` is a still extracted at 00:01:44 from the project's existing

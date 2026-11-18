@@ -8,13 +8,13 @@ The repository retains a byte-for-byte October 2025 source snapshot containing a
 
 ## Third-party material
 
-The website uses locally hosted Inter font files. A prototype screenshot is retained in the repository but excluded from website deployment pending review of depicted asset and likeness rights. See `assets/README.md` for its provenance.
+The website uses locally hosted Inter font files. The homepage features the Vesper exhibit render and short, silent desktop captures of the aerial screw and generator exhibits. The archived Tesla prototype screenshot is excluded from website deployment pending review of depicted asset and likeness rights. See [the media notes](assets/README.md) for provenance.
 
 - **Inter** is served locally from `assets/fonts/` on the original-vision page, blog index and blog posts. The Latin variable font comes from `@fontsource-variable/inter` 5.3.0, under the SIL Open Font License 1.1 preserved in `assets/fonts/Inter-OFL.txt`. The homepage uses a system-font fallback without downloading a font. The byte-for-byte historical `.txt` snapshot retains its original Google Fonts references; it is not a rendered application page.
 - **Tally** supplies the early-access form under its own terms. The homepage connects to the embedded form only after a visitor chooses to load it, or follows the direct Tally link. The Tally widget loader is not included. Submissions are held in Tally and the connected private Google Sheet, not this repository.
 - **Google Analytics 4** is optional. The homepage and the original-vision page load the first-party consent scripts `analytics-config.js` and `analytics.js`. Those scripts do not contact Google until a visitor chooses to allow analytics. After that choice, they load Google’s tag from [`https://www.googletagmanager.com/gtag/js`](https://www.googletagmanager.com/gtag/js). Measurement is Google’s service under the [Google Analytics terms](https://www.google.com/analytics/terms/). The blog pages do not include this tag.
 
-Public demo promotion has been removed pending review of names, depicted assets, likenesses, audio and third-party material. The blog contains quotations from published translations with source links. Rights in quoted material remain with their respective rights holders.
+The homepage links to the public contest entry and its Quest demo. Promotion of the archived prototype recording remains deferred pending review of names, depicted assets, likenesses, audio and third-party material. The blog contains quotations from published translations with source links. Rights in quoted material remain with their respective rights holders.
 
 ## Names, facts, and trademarks
 
