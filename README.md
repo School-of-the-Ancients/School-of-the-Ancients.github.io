@@ -17,10 +17,11 @@ changes to the hosted application. The copyright page does not claim that a DMCA
 agent is registered. These pages do not establish legal clearance for avatars,
 competition eligibility, or compliance by the separate legacy deployments.
 
-The homepage's Tally iframe has no `src` until the visitor chooses to load it.
-This choice is separate from optional analytics. The direct Tally link also
-connects to Tally. The Tally form itself is maintained separately; changes here do
-not change its fields, age policy, integrations or email-list settings.
+The homepage opens either waitlist route only after the visitor selects “18 or
+older.” The Tally iframe loads when the visitor selects “Load signup form.”
+Visitors can also open the form on Tally. Optional analytics has its own consent
+control. The standalone Tally form and its required fields are managed in the
+form owner's Tally workspace. See [waitlist setup](WAITLIST_SETUP.md).
 
 The blog and readable historical page use the bundled Inter Latin font under
 `assets/fonts/Inter-OFL.txt`. Do not edit the byte-for-byte historical `.txt`
