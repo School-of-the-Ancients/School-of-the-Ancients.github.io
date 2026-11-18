@@ -76,6 +76,7 @@ details ul{padding-left:19px}
 .waitlist h2{font-size:46px}
 .waitlist .intro{max-width:390px;font-size:14px;color:var(--muted);margin:21px 0}
 .waitlist .small-print{font-size:10px;line-height:1.8;color:var(--muted);max-width:420px;margin-bottom:0}
+.waitlist .button:disabled{background:var(--paper);border-color:var(--line);color:var(--muted);cursor:not-allowed}
 .waitlist .embed{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;min-width:0}
 .waitlist iframe{display:block;width:100%;min-height:370px;border:0;color-scheme:light}
 .fallback{font-size:11px;color:var(--muted);margin:0 0 12px}
