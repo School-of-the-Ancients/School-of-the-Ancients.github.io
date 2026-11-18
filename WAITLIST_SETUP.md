@@ -9,7 +9,7 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 - Embed: `https://tally.so/embed/o99kJN` with `alignLeft=1`, `hideTitle=1`, and `transparentBackground=1`.
 - The homepage displays an age selector before loading the iframe or enabling the direct link. Only “18 or older” unlocks these options. Selecting “Load signup form” then connects to Tally. The age selection stays in the visitor’s browser.
 - With JavaScript disabled, the site provides a contact address for waitlist help.
-- The public share URL is managed in Tally. Keep its eligibility requirement in the form itself so it also applies to visitors who use a saved link.
+- The published Tally form has two pages. The first requires “I confirm I am 18 or older.” The second collects an email address and a separate opt-in for updates. Both the embedded form and the public share URL use these pages.
 - Submissions go to the Tally form and its private Google Sheet, not to GitHub or the static site.
 
 ### Production smoke test
@@ -22,7 +22,7 @@ The School of the Ancients website is hosted on **GitHub Pages**, which cannot d
 
 ## Behavior and privacy
 
-- The form asks for an email and explicit opt-in to occasional early-access announcements.
+- A new submission records the adult declaration separately from the email opt-in.
 - Tally handles submission. The website does not claim that signup succeeded.
 - Emails are not committed to GitHub, stored in browser localStorage, or sent to project telemetry.
 - Signups are collected through Tally and stored in a private Google Sheet. They are not shared publicly.
