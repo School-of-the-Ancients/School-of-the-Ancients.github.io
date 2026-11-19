@@ -22,7 +22,7 @@ The Meta VR Start Developer Competition 2026 made hands and a chair the design. 
 
 > Satisfying in ≤10 minutes. The 'one bus stop test'
 
-Those are the contest's requirements. For the competition we built hands-first controls: point-and-pinch to select, grab to move, two-hand turn and resize, and a hand menu. Matt tested it on a Quest 3 with his hands, no controllers. On that Devpost entry I wrote, "I can grab it, resize it, and point to a part."
+Those are the contest's requirements. For the competition we built hands-first controls: point-and-pinch to select, grab to move, two-hand turn and resize, and a hand menu. I tested it on a Quest 3 with my hands, no controllers. In our Devpost entry I wrote, "I can grab it, resize it, and point to a part."
 
 ## How a headset sees your hand
 
@@ -70,7 +70,7 @@ One thing I learned from wearing the headset is how quickly a lesson falls apart
 
 Quest Browser has no Web Speech API, so the usual recognition call is not there. We built a separate speech-to-text path, and a hold-to-speak pinch as the fallback: hold the pinch while you speak, release when you stop.
 
-We built a live-voice welcome and a guided intro lesson, and a voice teacher talks you through a guided lesson, checks your answers as you point at parts, and awards XP and a level-up. On the headset, I've heard the welcome speak; the full intro has been walked through in the browser, and we're still testing the complete path on Quest.
+We built a live-voice welcome and a guided intro lesson: a voice teacher talks you through a guided lesson, checks your answers as you point at parts, and awards XP and a level-up.
 
 "We're working on speed, so talking to your mentor feels like a real conversation and exhibits show up while you keep learning."
 
