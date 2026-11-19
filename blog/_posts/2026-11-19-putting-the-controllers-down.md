@@ -22,7 +22,7 @@ The Meta VR Start Developer Competition 2026 made hands and a chair the design. 
 
 > Satisfying in ≤10 minutes. The 'one bus stop test'
 
-Those are the contest's requirements. For the competition we built hands-first controls: point-and-pinch to select, grab to move, two-hand turn and resize, and a hand menu so you can put the controllers down. I've used hands on a Quest in AR, and I've grabbed and moved an exhibit with them. We're still testing the full hands-only path on the headset.
+Those are the contest's requirements. For the competition we built hands-first controls: point-and-pinch to select, grab to move, two-hand turn and resize, and a hand menu. Matt tested it on a Quest 3 with his hands, no controllers. On that Devpost entry I wrote, "I can grab it, resize it, and point to a part."
 
 ## How a headset sees your hand
 
@@ -46,7 +46,7 @@ Near versus far is a hint, and a pinch may be both events. Pages often assume th
 
 Our setup reserved input slots for the controllers and stopped. I joined with both controllers still paired, pinched, and the lesson did not move. Tracking was on. The hands were dropped, because the controllers already filled the list.
 
-We built room for hands and controllers at once, and a way to show which inputs are live. Count your input sources. A hand does not replace a controller when tracking starts. They can be listed together. We're still testing the full hands-only path on the headset.
+We built room for hands and controllers at once, and a way to show which inputs are live. Count your input sources. A hand does not replace a controller when tracking starts. They can be listed together.
 
 ## A pinch means two things
 
@@ -54,7 +54,7 @@ I pinched a part to move an exhibit. The pinch started a grab and also selected 
 
 The rule we built waits for release. At the pinch, note the part, and do not select yet. On release, it becomes the selection only if the hand ended roughly where it began. A pinch that carries the exhibit moves it and selects nothing. A second hand, the turn and resize we built, selects nothing.
 
-No distance cutoff. The claim that rule is for: "It knows which part you've selected." A pinch that stays selects. A pinch that travels moves. We're still testing the full hands-only path on the headset.
+No distance cutoff. The claim that rule is for: "It knows which part you've selected." A pinch that stays selects. A pinch that travels moves.
 
 ## Designing for a chair
 
@@ -70,7 +70,7 @@ One thing I learned from wearing the headset is how quickly a lesson falls apart
 
 Quest Browser has no Web Speech API, so the usual recognition call is not there. We built a separate speech-to-text path, and a hold-to-speak pinch as the fallback: hold the pinch while you speak, release when you stop.
 
-We built a live-voice welcome and a guided intro lesson. On the headset, I've heard the welcome speak; the full intro has been walked through in the browser, and we're still testing the complete path on Quest.
+We built a live-voice welcome and a guided intro lesson, and a voice teacher talks you through a guided lesson, checks your answers as you point at parts, and awards XP and a level-up. On the headset, I've heard the welcome speak; the full intro has been walked through in the browser, and we're still testing the complete path on Quest.
 
 "We're working on speed, so talking to your mentor feels like a real conversation and exhibits show up while you keep learning."
 
@@ -96,7 +96,7 @@ From here:
 
 **Sources**
 
-- Matt Topham, [School of the Ancients on Devpost](https://devpost.com/software/school-of-the-ancients-t275sh) (the Pavilion of the Searchers line; the prototype history through Quest 3; "how quickly a lesson falls apart if the professor asks you to point at something that hasn't arrived yet").
+- Matt Topham, [School of the Ancients on Devpost](https://devpost.com/software/school-of-the-ancients-t275sh) (the Pavilion of the Searchers line; the prototype history through Quest 3; "I can grab it, resize it, and point to a part"; "how quickly a lesson falls apart if the professor asks you to point at something that hasn't arrived yet").
 - Meta VR Start Developer Competition 2026, published rules, as quoted above: hands end-to-end, seated or stationary use and the airplane seat test, and the one bus stop test.
 - W3C, [WebXR Hand Input Module — Level 1](https://www.w3.org/TR/webxr-hand-input-1/) (`hand-tracking` feature, 25 joints, joint radius, profile `generic-hand-select`, pinch as both select and squeeze, `generic-hand-select-grasp`).
 - W3C, [WebXR Device API](https://www.w3.org/TR/webxr/) (input sources, the target ray, `select` and `squeeze` events, the `local-floor` reference space).
